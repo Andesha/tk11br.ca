@@ -1,0 +1,89 @@
+{{- define "main" }}
+<main class="landing-page" aria-label="Homepage">
+  <section class="landing-hero">
+    <p class="hero-kicker">London, Ontario · Research software · High performance computing</p>
+    <h1>Tyler Collins</h1>
+    <p class="hero-role">High Performance Computing Technical Consultant</p>
+    <p class="hero-bio">
+      I help researchers turn computational problems into reliable, scalable software and workflows.
+      My work spans HPC systems, Python tooling, research analytics, EEG/MEG pipelines, and practical
+      performance support for scientific teams.
+    </p>
+    <ul class="hero-interests" aria-label="Research and software interests">
+      <li>HPC</li>
+      <li>Python</li>
+      <li>Research software</li>
+      <li>EEG/MEG</li>
+      <li>Workflow automation</li>
+    </ul>
+    <nav class="hero-links" aria-label="Primary links">
+      <a href="/posts/">Blog</a>
+      <a href="/projects/">Projects</a>
+      <a href="/talks/">Talks</a>
+      <a href="https://github.com/Andesha" rel="me noopener">GitHub</a>
+      <a href="https://scholar.google.com/citations?hl=en&authuser=1&user=-QChIzQAAAAJ" rel="me noopener">Scholar</a>
+      <a href="mailto:collins.tyler.k@gmail.com">Email</a>
+    </nav>
+  </section>
+
+  <section class="landing-section" aria-labelledby="projects-title">
+    <div class="section-heading">
+      <p class="section-kicker">Selected work</p>
+      <h2 id="projects-title">Highlighted projects</h2>
+    </div>
+    <div class="project-grid">
+      <article class="project-card">
+        <h3>ViewClust</h3>
+        <p>Python package for measuring and visualizing usage on Slurm-based HPC clusters. Used inside SHARCNET and by collaborators across the Alliance.</p>
+        <a href="https://github.com/Andesha/ViewClust" rel="noopener">View on GitHub →</a>
+      </article>
+      <article class="project-card">
+        <h3>PyLossless</h3>
+        <p>Python tooling for reproducible EEG preprocessing and quality-control workflows that researchers can audit and re-run.</p>
+        <a href="/projects/#pylossless">More on Projects →</a>
+      </article>
+      <article class="project-card">
+        <h3>EEGStudyFlow</h3>
+        <p>Workflow patterns for managing EEG studies from raw recordings through to analysis-ready outputs without re-deriving state.</p>
+        <a href="/projects/#eegstudyflow">More on Projects →</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="landing-section" aria-labelledby="recent-posts-title">
+    <div class="section-heading row-heading">
+      <div>
+        <p class="section-kicker">Writing</p>
+        <h2 id="recent-posts-title">Recent posts</h2>
+      </div>
+      <a class="section-link" href="/posts/">All posts →</a>
+    </div>
+    {{- $posts := first 5 (where site.RegularPages "Type" "posts") }}
+    {{- if $posts }}
+    <div class="post-list-compact">
+      {{- range $posts }}
+      <article class="compact-post">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        {{- with .Summary }}<p>{{ . | plainify | htmlUnescape | truncate 160 }}</p>{{- end }}
+      </article>
+      {{- end }}
+    </div>
+    {{- else }}
+    <p>No posts yet.</p>
+    {{- end }}
+  </section>
+
+  <section class="landing-section two-column" aria-labelledby="talks-title">
+    <div>
+      <p class="section-kicker">Talks &amp; publications</p>
+      <h2 id="talks-title">Recorded talks</h2>
+    </div>
+    <p>
+      Recorded talks on Python performance, HPC scheduling, and research-software workflows are
+      collected on the <a href="/talks/">Talks</a> page. Selected publications are linked from
+      <a href="https://scholar.google.com/citations?hl=en&authuser=1&user=-QChIzQAAAAJ" rel="me noopener">Google Scholar</a>.
+    </p>
+  </section>
+</main>
+{{- end }}
