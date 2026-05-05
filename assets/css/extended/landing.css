@@ -498,6 +498,7 @@ summary:focus-visible {
 }
 
 .project-card {
+  position: relative;
   display: grid;
   grid-template-columns: 78px minmax(0, 1fr);
   gap: 18px;
@@ -514,8 +515,23 @@ summary:focus-visible {
   transform: translateY(-2px);
 }
 
+.project-card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: var(--radius);
+}
+
+.project-card-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 .project-card-art {
+  position: relative;
+  z-index: 2;
   align-self: start;
+  pointer-events: none;
 }
 
 .utilization-grid {
@@ -613,10 +629,19 @@ summary:focus-visible {
   font-size: 0.9rem;
 }
 
+.project-card-body a {
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;
+}
+
 .project-card-body {
+  position: relative;
+  z-index: 2;
   display: flex;
   min-width: 0;
   flex-direction: column;
+  pointer-events: none;
 }
 
 .landing-split {
