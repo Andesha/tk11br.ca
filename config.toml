@@ -1,0 +1,122 @@
+baseURL = "https://www.tk11br.ca/"
+defaultContentLanguage = "en"
+title = "Tyler Collins"
+theme = "PaperMod"
+copyright = "© 2022-2026 Tyler Collins. Content licensed under CC BY-NC 4.0."
+enableRobotsTXT = true
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+
+[services]
+  [services.rss]
+    limit = 10
+
+[languages]
+  [languages.en]
+    label = "English"
+    locale = "en"
+    weight = 1
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  env = "production"
+  author = "Tyler Collins"
+  description = "Personal website and blog for Tyler Collins, High Performance Computing Technical Consultant."
+  keywords = ["Tyler Collins", "High Performance Computing", "HPC", "Python", "Research Software", "EEG", "SHARCNET"]
+  defaultTheme = "dark"
+  disableThemeToggle = false
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+  ShowFullTextinRSS = true
+  DateFormat = "2006-01-02"
+  since = 2022
+
+  [params.editPost]
+    disabled = true
+
+  [params.profileMode]
+    enabled = true
+    title = "Tyler Collins"
+    subtitle = "High Performance Computing Technical Consultant"
+
+    [[params.profileMode.buttons]]
+      name = "Posts"
+      url = "/posts/"
+
+    [[params.profileMode.buttons]]
+      name = "Tags"
+      url = "/tags/"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/Andesha"
+
+  [[params.socialIcons]]
+    name = "googlescholar"
+    url = "https://scholar.google.com/citations?hl=en&authuser=1&user=-QChIzQAAAAJ"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:collins.tyler.k@gmail.com"
+
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+    weight = 3
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+
+    [markup.goldmark.renderer]
+      unsafe = true
+
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
