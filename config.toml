@@ -34,16 +34,21 @@ enableRobotsTXT = true
   description = "Personal website and blog for Tyler Collins, High Performance Computing Technical Consultant."
   keywords = ["Tyler Collins", "High Performance Computing", "HPC", "Python", "Research Software", "EEG", "SHARCNET"]
   defaultTheme = "dark"
-  disableThemeToggle = false
+  disableThemeToggle = true
+  disableScrollToTop = true
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
+  ShowCodeCopyButtons = false
   ShowRssButtonInSectionTermList = true
   ShowFullTextinRSS = true
   DateFormat = "2006-01-02"
   since = 2022
+
+  [params.assets]
+    theme_color = "#080c0f"
+    msapplication_TileColor = "#080c0f"
 
   [params.editPost]
     disabled = true

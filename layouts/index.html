@@ -1,29 +1,66 @@
 {{- define "main" }}
-<main class="landing-page" aria-label="Homepage">
-  <section class="landing-hero">
-    <p class="hero-kicker">London, Ontario · Research software · High performance computing</p>
-    <h1>Tyler Collins</h1>
-    <p class="hero-role">High Performance Computing Technical Consultant</p>
-    <p class="hero-bio">
-      I help researchers turn computational problems into reliable, scalable software and workflows.
-      My work spans HPC systems, Python tooling, research analytics, EEG/MEG pipelines, and practical
-      performance support for scientific teams.
-    </p>
-    <ul class="hero-interests" aria-label="Research and software interests">
-      <li>HPC</li>
-      <li>Python</li>
-      <li>Research software</li>
-      <li>EEG/MEG</li>
-      <li>Workflow automation</li>
-    </ul>
-    <nav class="hero-links" aria-label="Primary links">
-      <a href="/posts/">Blog</a>
-      <a href="/projects/">Projects</a>
-      <a href="/talks/">Talks</a>
-      <a href="https://github.com/Andesha" rel="me noopener">GitHub</a>
-      <a href="https://scholar.google.com/citations?hl=en&authuser=1&user=-QChIzQAAAAJ" rel="me noopener">Scholar</a>
-      <a href="mailto:collins.tyler.k@gmail.com">Email</a>
-    </nav>
+<div class="landing-page" aria-label="Homepage">
+  <section class="landing-hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="hero-kicker">London, Ontario · Research software · High performance computing</p>
+      <h1 id="hero-title">Tyler Collins</h1>
+      <p class="hero-role">High Performance Computing Technical Consultant</p>
+      <p class="hero-bio">
+        I help researchers turn computational problems into reliable, scalable software and workflows.
+        My work spans HPC systems, Python tooling, research analytics, EEG/MEG pipelines, and practical
+        performance support for scientific teams.
+      </p>
+      <ul class="hero-chips" aria-label="Research and software interests">
+        <li>HPC</li>
+        <li>Python</li>
+        <li>Research software</li>
+        <li>EEG/MEG</li>
+        <li>Workflow automation</li>
+      </ul>
+    </div>
+
+    <aside class="quick-links-card" aria-labelledby="quick-links-title">
+      <p class="panel-kicker" id="quick-links-title">Quick links</p>
+      <div class="quick-link-grid">
+        <a class="quick-link" href="/projects/">
+          <span class="quick-link-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 7v10M19 7v10M8 5h8M8 19h8M8 12h8"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/></svg>
+          </span>
+          <span><strong>Suggested software</strong><small>Tools and libraries I recommend</small></span>
+        </a>
+        <a class="quick-link" href="/posts/">
+          <span class="quick-link-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6z"/><path d="M14 3v4h4M9 11h6M9 15h6"/></svg>
+          </span>
+          <span><strong>Cheat sheets</strong><small>Quick reference guides</small></span>
+        </a>
+        <a class="quick-link" href="/posts/">
+          <span class="quick-link-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 19V9M10 19V5M15 19v-7M20 19V3"/><path d="M4 19h17M7 9l3-4 5 7 5-9"/></svg>
+          </span>
+          <span><strong>Setup guides</strong><small>Notes for environments, clusters, and tools</small></span>
+        </a>
+        <a class="quick-link" href="/tags/scheduling/">
+          <span class="quick-link-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 17h5v3H4zM15 17h5v3h-5zM9 4h6v4H9zM12 8v4M6.5 17v-3H18v3"/><path d="M4 9h4M16 9h4"/></svg>
+          </span>
+          <span><strong>Slurm notes</strong><small>Scheduling, QoS, and best practices</small></span>
+        </a>
+        <a class="quick-link" href="/projects/#eegstudyflow">
+          <span class="quick-link-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><path d="M9 6h6M7.5 8.5l3 6.5M16.5 8.5l-3 6.5"/></svg>
+          </span>
+          <span><strong>Data workflows</strong><small>Processing patterns and templates</small></span>
+        </a>
+        <a class="quick-link" href="/talks/">
+          <span class="quick-link-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6 3h12v18H6z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>
+          </span>
+          <span><strong>Notebook gallery</strong><small>Example notebooks and demos</small></span>
+        </a>
+      </div>
+      <a class="panel-link" href="/posts/">View all guides &amp; resources <span aria-hidden="true">→</span></a>
+    </aside>
   </section>
 
   <section class="landing-section" aria-labelledby="projects-title">
@@ -33,57 +70,92 @@
     </div>
     <div class="project-grid">
       <article class="project-card">
-        <h3>ViewClust</h3>
-        <p>Python package for measuring and visualizing usage on Slurm-based HPC clusters. Used inside SHARCNET and by collaborators across the Alliance.</p>
-        <a href="https://github.com/Andesha/ViewClust" rel="noopener">View on GitHub →</a>
+        <div class="project-card-art utilization-grid" aria-hidden="true">
+          {{- range seq 1 25 }}<span></span>{{- end }}
+        </div>
+        <div class="project-card-body">
+          <h3>ViewClust</h3>
+          <p>Python package for measuring and visualizing usage on Slurm-based HPC clusters. Used inside SHARCNET and by collaborators across the Alliance.</p>
+          <a href="https://github.com/Andesha/ViewClust" rel="noopener">View on GitHub <span aria-hidden="true">→</span></a>
+        </div>
       </article>
       <article class="project-card">
-        <h3>PyLossless</h3>
-        <p>Python tooling for reproducible EEG preprocessing and quality-control workflows that researchers can audit and re-run.</p>
-        <a href="/projects/#pylossless">More on Projects →</a>
+        <div class="project-card-art waveform-badge" aria-hidden="true">
+          <svg viewBox="0 0 160 72" preserveAspectRatio="none"><path d="M2 42 L13 42 L20 16 L27 58 L35 31 L43 39 L51 21 L58 55 L65 38 L72 44 L80 12 L88 60 L95 35 L102 40 L110 25 L118 50 L126 43 L134 32 L142 41 L158 41"/></svg>
+        </div>
+        <div class="project-card-body">
+          <h3>PyLossless</h3>
+          <p>Python tooling for reproducible EEG preprocessing and quality-control workflows that researchers can audit and re-run.</p>
+          <a href="/projects/#pylossless">More on Projects <span aria-hidden="true">→</span></a>
+        </div>
       </article>
       <article class="project-card">
-        <h3>EEGStudyFlow</h3>
-        <p>Workflow patterns for managing EEG studies from raw recordings through to analysis-ready outputs without re-deriving state.</p>
-        <a href="/projects/#eegstudyflow">More on Projects →</a>
+        <div class="project-card-art dag-badge" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="project-card-body">
+          <h3>EEGStudyFlow</h3>
+          <p>Workflow patterns for managing EEG studies from raw recordings through to analysis-ready outputs without re-deriving state.</p>
+          <a href="/projects/#eegstudyflow">More on Projects <span aria-hidden="true">→</span></a>
+        </div>
       </article>
     </div>
   </section>
 
-  <section class="landing-section" aria-labelledby="recent-posts-title">
-    <div class="section-heading row-heading">
-      <div>
-        <p class="section-kicker">Writing</p>
-        <h2 id="recent-posts-title">Recent posts</h2>
+  <div class="landing-split">
+    <section class="landing-section compact-section" aria-labelledby="recent-posts-title">
+      <div class="section-heading row-heading">
+        <div>
+          <p class="section-kicker">Writing</p>
+          <h2 id="recent-posts-title">Recent posts</h2>
+        </div>
+        <a class="section-link" href="/posts/">All posts <span aria-hidden="true">→</span></a>
       </div>
-      <a class="section-link" href="/posts/">All posts →</a>
-    </div>
-    {{- $posts := first 5 (where site.RegularPages "Type" "posts") }}
-    {{- if $posts }}
-    <div class="post-list-compact">
-      {{- range $posts }}
-      <article class="compact-post">
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
-        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-        {{- with .Summary }}<p>{{ . | plainify | htmlUnescape | truncate 160 }}</p>{{- end }}
-      </article>
+      {{- $posts := first 5 (where site.RegularPages "Type" "posts") }}
+      {{- if $posts }}
+      <div class="post-list-compact">
+        {{- range $posts }}
+        <article class="compact-post">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}<span>{{ .ReadingTime }} min read</span></time>
+          <div>
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            {{- with .Summary }}<p>{{ . | plainify | htmlUnescape | truncate 150 }}</p>{{- end }}
+          </div>
+          {{- with index .Params.tags 0 }}<a class="post-chip" href="{{ printf "/tags/%s/" (urlize .) | relURL }}">{{ . }}</a>{{- end }}
+        </article>
+        {{- end }}
+      </div>
+      {{- else }}
+      <p>No posts yet.</p>
       {{- end }}
-    </div>
-    {{- else }}
-    <p>No posts yet.</p>
-    {{- end }}
-  </section>
+    </section>
 
-  <section class="landing-section two-column" aria-labelledby="talks-title">
-    <div>
-      <p class="section-kicker">Talks &amp; publications</p>
-      <h2 id="talks-title">Recorded talks</h2>
-    </div>
-    <p>
-      Recorded talks on Python performance, HPC scheduling, and research-software workflows are
-      collected on the <a href="/talks/">Talks</a> page. Selected publications are linked from
-      <a href="https://scholar.google.com/citations?hl=en&authuser=1&user=-QChIzQAAAAJ" rel="me noopener">Google Scholar</a>.
-    </p>
-  </section>
-</main>
+    <section class="landing-section compact-section" aria-labelledby="talks-title">
+      <div class="section-heading row-heading">
+        <div>
+          <p class="section-kicker">Talks &amp; publications</p>
+          <h2 id="talks-title">Recorded talks</h2>
+        </div>
+        <a class="section-link" href="/talks/">All talks <span aria-hidden="true">→</span></a>
+      </div>
+      {{- $talks := first 3 (where site.RegularPages "Params.tags" "intersect" (slice "talk")) }}
+      {{- if $talks }}
+      <div class="talk-list">
+        {{- range $talks }}
+        <article class="talk-item">
+          <div>
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            {{- with .Params.subtitle }}<p>{{ . }}</p>{{- end }}
+          </div>
+          <a class="play-link" href="{{ .RelPermalink }}" aria-label="Open {{ .Title }}">▶</a>
+        </article>
+        {{- end }}
+      </div>
+      {{- else }}
+      <p>Recorded talks are collected on the <a href="/talks/">Talks</a> page.</p>
+      {{- end }}
+    </section>
+  </div>
+</div>
 {{- end }}
