@@ -65,8 +65,11 @@ summary:focus-visible {
 
 /* Header */
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   border-bottom: 1px solid var(--border);
-  background: rgba(8, 12, 15, 0.82);
+  background: rgba(8, 12, 15, 0.92);
   backdrop-filter: blur(12px);
 }
 
@@ -147,6 +150,12 @@ summary:focus-visible {
   letter-spacing: 0;
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
 .desktop-menu {
   display: flex;
   align-items: center;
@@ -165,6 +174,26 @@ summary:focus-visible {
   font-size: 0.95rem;
   font-weight: 600;
   box-shadow: none;
+}
+
+.desktop-social {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-right: 28px;
+  border-right: 1px solid var(--border);
+}
+
+.desktop-social a {
+  color: var(--secondary);
+  font-size: 0.86rem;
+  font-weight: 600;
+  box-shadow: none;
+}
+
+.desktop-social a:hover {
+  color: var(--accent);
+  background: transparent;
 }
 
 .desktop-menu a::after {
@@ -238,6 +267,12 @@ summary:focus-visible {
 .mobile-menu a:hover {
   color: var(--accent);
   background: rgba(245, 165, 36, 0.08);
+}
+
+.mobile-menu-divider {
+  height: 1px;
+  margin: 8px 4px;
+  background: var(--border);
 }
 
 /* Homepage */
@@ -780,15 +815,12 @@ pre {
 }
 
 .footer-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
   max-width: calc(var(--nav-width) + var(--gap) * 2);
   margin: 0 auto;
   padding: 20px var(--gap);
   color: var(--secondary);
   font-size: 0.82rem;
+  text-align: center;
 }
 
 .footer-inner p {
@@ -847,7 +879,7 @@ pre {
   }
 
   .brand-name,
-  .desktop-menu {
+  .nav-links {
     display: none;
   }
 
