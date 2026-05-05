@@ -55,12 +55,14 @@
           </span>
           <span><strong>Data workflows</strong><small>Processing patterns and templates</small></span>
         </a>
-        <a class="quick-link" href="/talks/">
+        {{- with site.GetPage "/ai-disclosure" }}
+        <a class="quick-link" href="{{ .RelPermalink }}">
           <span class="quick-link-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M6 3h12v18H6z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>
           </span>
-          <span><strong>Notebook gallery</strong><small>Example notebooks and demos</small></span>
+          <span><strong>{{ .Title }}</strong><small>{{ .Description }}</small></span>
         </a>
+        {{- end }}
       </div>
       <a class="panel-link" href="/posts/">View all guides &amp; resources <span aria-hidden="true">→</span></a>
     </aside>
@@ -72,16 +74,6 @@
       <h2 id="projects-title">Highlighted projects</h2>
     </div>
     <div class="project-grid">
-      <article class="project-card">
-        <div class="project-card-art utilization-grid" aria-hidden="true">
-          {{- range seq 1 25 }}<span></span>{{- end }}
-        </div>
-        <div class="project-card-body">
-          <h3>ViewClust</h3>
-          <p>Python package for measuring and visualizing usage on Slurm-based HPC clusters. Used inside SHARCNET and by collaborators across the Alliance.</p>
-          <a href="https://github.com/Andesha/ViewClust" rel="noopener">View on GitHub <span aria-hidden="true">→</span></a>
-        </div>
-      </article>
       <article class="project-card">
         <div class="project-card-art waveform-badge" aria-hidden="true">
           <svg viewBox="0 0 160 72" preserveAspectRatio="none"><path d="M2 42 L13 42 L20 16 L27 58 L35 31 L43 39 L51 21 L58 55 L65 38 L72 44 L80 12 L88 60 L95 35 L102 40 L110 25 L118 50 L126 43 L134 32 L142 41 L158 41"/></svg>
@@ -100,6 +92,16 @@
           <h3>EEGStudyFlow</h3>
           <p>Workflow patterns for managing EEG studies from raw recordings through to analysis-ready outputs without re-deriving state.</p>
           <a href="/projects/#eegstudyflow">More on Projects <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      <article class="project-card">
+        <div class="project-card-art utilization-grid" aria-hidden="true">
+          {{- range seq 1 25 }}<span></span>{{- end }}
+        </div>
+        <div class="project-card-body">
+          <h3>ViewClust</h3>
+          <p>Python package for measuring and visualizing usage on Slurm-based HPC clusters. Used inside SHARCNET and by collaborators across the Alliance.</p>
+          <a href="https://github.com/Andesha/ViewClust" rel="noopener">View on GitHub <span aria-hidden="true">→</span></a>
         </div>
       </article>
     </div>
