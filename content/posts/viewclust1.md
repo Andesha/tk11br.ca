@@ -1,6 +1,7 @@
 ---
 title: "ViewClust: Early Days"
 subtitle: "and its cousin ViewClust-Vis!"
+description: "Early notes on packaging ViewClust and ViewClust-Vis for cluster metrics and HPC usage analysis."
 date: 2022-03-22T13:23:54-04:00
 draft: false
 tags: ["python", "viewclust", "pip"]

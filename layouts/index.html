@@ -1,4 +1,9 @@
 {{- define "main" }}
+{{- range where site.RegularPages "Type" "posts" }}
+  {{- if not .Description }}
+    {{- errorf "Missing description in %s" .File.Path }}
+  {{- end }}
+{{- end }}
 <div class="landing-page" aria-label="Homepage">
   <section class="landing-hero" aria-labelledby="hero-title">
     <div class="hero-copy">
@@ -67,6 +72,26 @@
       <a class="panel-link" href="/posts/">View all guides &amp; resources <span aria-hidden="true">→</span></a>
     </aside>
   </section>
+
+  {{- $latestPost := index (first 1 (where site.RegularPages "Type" "posts")) 0 }}
+  {{- with $latestPost }}
+  <section class="latest-post-card" aria-labelledby="latest-post-title">
+    {{- $latestPostDescription := .Description | default (.Summary | plainify | htmlUnescape) | truncate 110 }}
+    <div class="latest-post-copy">
+      <p class="section-kicker">Latest post:</p>
+      <h2 id="latest-post-title">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{- with $latestPostDescription }}<span>{{ . }}</span>{{- end }}
+      </h2>
+      <p class="latest-post-meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+        <span aria-hidden="true">·</span>
+        <span>{{ .ReadingTime }} min read</span>
+      </p>
+    </div>
+    <a class="latest-post-cta" href="{{ .RelPermalink }}">Read latest <span aria-hidden="true">→</span></a>
+  </section>
+  {{- end }}
 
   <section class="landing-section" aria-labelledby="projects-title">
     <div class="section-heading">

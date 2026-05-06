@@ -1,6 +1,7 @@
 ---
 title: "Cython: A First Look"
 subtitle: "Surely not 40x, right?"
+description: "A first look at using Cython to recover performance when Python code needs to run faster."
 date: 2022-03-20T14:40:38-04:00
 draft: false
 tags: ["talk", "python"]

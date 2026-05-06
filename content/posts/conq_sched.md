@@ -1,6 +1,7 @@
 ---
 title: "Conquering the Scheduler"
 subtitle: "... or maybe any scheduler?"
+description: "A talk about choosing job configurations and scheduler strategies for responsive HPC workloads."
 date: 2022-03-22T00:50:54-04:00
 draft: false
 tags: ["talk", "scheduling"]

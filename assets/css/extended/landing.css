@@ -352,6 +352,7 @@ summary:focus-visible {
 }
 
 .quick-links-card,
+.latest-post-card,
 .project-card,
 .talk-list {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0.01));
@@ -489,6 +490,92 @@ summary:focus-visible {
   font-size: 0.86rem;
   border: 1px solid rgba(245, 165, 36, 0.7);
   border-radius: 7px;
+}
+
+.latest-post-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  gap: 14px;
+  align-items: center;
+  margin: 16px 0 0;
+  padding: 11px 14px;
+  border-color: rgba(245, 165, 36, 0.28);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0.01));
+}
+
+.latest-post-copy {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr) max-content;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.latest-post-copy .section-kicker {
+  white-space: nowrap;
+}
+
+.latest-post-copy h2 {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: var(--primary);
+  font-size: clamp(1rem, 1.6vw, 1.22rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.latest-post-copy h2 a {
+  color: var(--primary);
+  box-shadow: none;
+}
+
+.latest-post-copy h2 span {
+  margin-left: 7px;
+  color: var(--secondary);
+  font-size: 0.78em;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.latest-post-copy h2 span::before {
+  content: "— ";
+}
+
+.latest-post-copy h2 a:hover {
+  color: var(--accent-strong);
+  background: transparent;
+}
+
+.latest-post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0;
+  color: var(--secondary);
+  font-size: 0.77rem;
+  white-space: nowrap;
+}
+
+.latest-post-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 750;
+  white-space: nowrap;
+  border: 1px solid rgba(245, 165, 36, 0.48);
+  border-radius: 7px;
+  box-shadow: none;
+}
+
+.latest-post-cta:hover {
+  color: var(--accent-strong);
+  background: rgba(245, 165, 36, 0.06);
 }
 
 .project-grid {
@@ -959,6 +1046,21 @@ pre {
   .row-heading {
     align-items: start;
     flex-direction: column;
+  }
+
+  .latest-post-card {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 13px;
+  }
+
+  .latest-post-copy {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .latest-post-cta {
+    justify-self: start;
   }
 
   .compact-post {

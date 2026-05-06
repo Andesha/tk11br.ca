@@ -1,6 +1,7 @@
 ---
 title: "Pandas Recipes for New Python Users"
 subtitle: "Couldn't live without it anymore..."
+description: "A beginner-friendly pandas talk with recipes for working with labeled data in Python."
 date: 2022-03-21T19:16:48-04:00
 draft: false
 tags: ["python", "pandas", "talk"]
