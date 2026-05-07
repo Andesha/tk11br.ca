@@ -76,20 +76,32 @@
   {{- $latestPost := index (first 1 (where site.RegularPages "Type" "posts")) 0 }}
   {{- with $latestPost }}
   <section class="latest-post-card" aria-labelledby="latest-post-title">
-    {{- $latestPostDescription := .Description | default (.Summary | plainify | htmlUnescape) | truncate 110 }}
-    <div class="latest-post-copy">
-      <p class="section-kicker">Latest post:</p>
-      <h2 id="latest-post-title">
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        {{- with $latestPostDescription }}<span>{{ . }}</span>{{- end }}
-      </h2>
-      <p class="latest-post-meta">
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
-        <span aria-hidden="true">·</span>
-        <span>{{ .ReadingTime }} min read</span>
-      </p>
+    {{- $latestPostDescription := .Description | default (.Summary | plainify | htmlUnescape) | plainify | htmlUnescape | truncate 180 }}
+    <div class="latest-post-mark" aria-hidden="true">
+      <span></span><span></span><span></span>
     </div>
-    <a class="latest-post-cta" href="{{ .RelPermalink }}">Read latest <span aria-hidden="true">→</span></a>
+    <div class="latest-post-copy">
+      <div class="latest-post-topline">
+        <p class="section-kicker">Latest post</p>
+        <p class="latest-post-meta">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+          <span aria-hidden="true">·</span>
+          <span>{{ .ReadingTime }} min read</span>
+        </p>
+      </div>
+      <h2 id="latest-post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      {{- with $latestPostDescription }}<p class="latest-post-description">{{ . }}</p>{{- end }}
+      <div class="latest-post-actions">
+        {{- with .Params.tags }}
+        <ul class="latest-post-tags" aria-label="Latest post tags">
+          {{- range first 2 . }}
+          <li><a href="{{ printf "/tags/%s/" (urlize .) | relURL }}">{{ . }}</a></li>
+          {{- end }}
+        </ul>
+        {{- end }}
+        <a class="latest-post-cta" href="{{ .RelPermalink }}">Read latest <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
   </section>
   {{- end }}
 
