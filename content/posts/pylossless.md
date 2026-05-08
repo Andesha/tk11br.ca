@@ -1,6 +1,6 @@
 ---
 title: "PyLossless"
-subtitle: "TODO: LOREM IPSUM"
+subtitle: "Making EEG preprocessing easier to run at scale"
 description: "Python tooling for reproducible EEG preprocessing and quality-control workflows."
 date: 2026-05-05T00:00:00-04:00
 draft: false
@@ -11,7 +11,7 @@ In April 2025 I had the idea to get [PyLossless](https://github.com/andesha/pylo
 
 Funnily enough, the module was already there! When I requested it be updated by the internal team, they said they had a few things that they'd like changed about it, especially if I was going to be doing active development on it myself.
 
-This lead to my active stewardship of the project and becoming a co-owner on the project's official repository.
+This led to my active stewardship of the project and becoming a co-owner on the project's official repository.
 
 The rest of this blog post is dedicated to the work I have since done on the project up to today to make it more HPC friendly, user friendly, documented, easy to containerize, and more. 
 
@@ -21,7 +21,7 @@ Since March 18th 2025, there have been **92 commits**!
 - **2,532 insertions**
 - **17,535 deletions**
 
-# Major repo changes since then
+## Major repo changes since then
 
 Since I took over for Scott Huberty, here's a rough list of my changes:
 
@@ -64,7 +64,7 @@ Deleted GitHub and project automation files:
 
 ### 3. Documentation and examples heavily changed
 
-Previous documentation was really dated. In included examples that didn't work anymore that were also bloating the repository. I chose to take all of this out, and rewrite it.
+Previous documentation was really dated. It included examples that didn't work anymore that were also bloating the repository. I chose to take all of this out, and rewrite it.
 
 Removed old examples and notebooks:
 
@@ -162,7 +162,7 @@ pylossless/assets/ll_default_config.yaml
 
 ### 8. Default config changed
 
-This section is a little downplayed, but mainly included support for being able to see that effect of your artifact rejection parameter choice in the first stage of the pipeline. It was another big AI win.
+This section is a little downplayed, but mainly included support for being able to see the effect of your artifact rejection parameter choice in the first stage of the pipeline. It was another big AI win.
 
 Notable config changes include:
 
@@ -297,3 +297,16 @@ New top-level tests and metrics files added:
 - `tests/conftest.py`
 
 These appear focused on EEG quality metrics, ICA quality, SNR, artifact reduction, and pipeline run/build validation.
+
+# What's left
+
+While this was a ton of changes that really helped researchers as well as myself use PyLossless, there remains a lot to do.
+
+Some next things that are of interest are:
+
+- Even better documentation
+- Benchmark comparisons against other pipelines
+- Better tests besides basic build tests
+- Bringing back CI/CD
+
+For now though, I'm happy!
