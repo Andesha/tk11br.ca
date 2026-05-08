@@ -7,9 +7,9 @@ draft: false
 tags: ["python", "pandas", "talk"]
 ---
 
-Eventually I got to the point in data analytics where keeping things in lists, or list of lists was no longer quite cutting it. My processing was slowly starting to grind to a halt, and things were getting way too abstract.
+Eventually I got to the point in data analytics where keeping things in lists, or lists of lists, was no longer quite cutting it. My processing was slowly starting to grind to a halt, and things were getting way too abstract.
 
-I decide to call up a friend who had worked in the business longer than me and they suggested "pandas". I was vaguely familiar as users/clients had used it in the past. A "DataFrame" did sound like it would take care of a lot of my problems after reading the documentation casually...
+I decided to call up a friend who had worked in the business longer than me, and they suggested "pandas." I was vaguely familiar with it because users and clients had used it in the past. A "DataFrame" did sound like it would take care of a lot of my problems after reading the documentation casually...
 
 Fast forward a year and pandas is now core to everything I do in Python. Couldn't live without it anymore, and as such my second talk at SHARCNET was about pandas.
 

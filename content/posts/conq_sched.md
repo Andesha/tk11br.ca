@@ -7,9 +7,9 @@ draft: false
 tags: ["talk", "scheduling"]
 ---
 
-Coming from a slightly different angle this time, I found that researchers were often isolating themselves to less (strictly fewer!) resources on HPC systems by not investigating what the node feature mixture looked like.
+Coming from a slightly different angle this time, I found that researchers were often isolating themselves to fewer resources on HPC systems by not investigating what the node feature mixture looked like.
 
-As such this talk was created to help direct potentially abstract development efforts towards optimizing for which feature sets are most available on a HPC cluster.
+As such, this talk was created to help direct potentially abstract development efforts toward optimizing for the feature sets that are most available on an HPC cluster.
 
 Below is my abstract for the talk as well as the recording:
 

@@ -3,9 +3,9 @@ title: "Talks"
 description: "Talks, recordings, workshops, and publications."
 ---
 
-Recordings and write-ups of talks I've given on Python performance, scheduling, and research-software workflows. Most were originally delivered as SHARCNET / Digital Research Alliance of Canada webinars.
+Recordings and write-ups of talks I've given on Python performance, scheduling, and research software workflows. Most were originally delivered as SHARCNET and Digital Research Alliance of Canada webinars.
 
-## Recorded talks
+## Recorded Talks
 
 {{< talks-list >}}
 

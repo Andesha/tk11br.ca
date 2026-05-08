@@ -7,11 +7,11 @@ draft: false
 tags: ["talk", "python"]
 ---
 
-Back when I first got hired at SHARCNET, I used a lot of Python. I mean a lot. What this meant is that I quickly became the lightning rod for all Python related questions (and commentary).
+Back when I first got hired at SHARCNET, I used a lot of Python. I mean a lot. This meant I quickly became the lightning rod for all Python-related questions and commentary.
 
-During a fun Friday chat, a colleague remarked that Python was on average 40x slower than C++. I defended my current language of choice saying it was better than that, surely. To make a long story short, I was wrong. It really is about 40x slower depending on the problem. Determined to prove myself capable, and my language of choice a bit more defensible, I decided to look into ways to make Python faster.
+During a fun Friday chat, a colleague remarked that Python was, on average, 40x slower than C++. I defended my current language of choice, saying it was better than that, surely. To make a long story short, I was wrong. It really is about 40x slower depending on the problem. Determined to prove myself capable, and my language of choice a bit more defensible, I decided to look into ways to make Python faster.
 
-I eventually landed on Cython. Turns out the best way to make Python faster was to use as much C++ as possible.
+I eventually landed on Cython. It turns out the best way to make Python faster was to use as much C++ as possible.
 
 Below is my abstract for the talk as well as the recording:
 

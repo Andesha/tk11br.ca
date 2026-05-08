@@ -19,6 +19,7 @@ When editing public site content, follow these house rules:
 - Use Title Case for page titles, post titles, section headings, and subheadings.
 - Preserve official capitalization for project names, acronyms, tools, packages, and brands.
 - Use sentence case for descriptions, summaries, subtitles, and ordinary body prose.
+- Never use em dashes, including HTML entities for them; use commas, colons, semicolons, parentheses, or sentence breaks instead.
 - End every bullet-list item with terminal punctuation.
 - Keep bullet-list capitalization and grammar parallel within each list.
 - Prefer concise, plain-language prose over formal marketing copy.
