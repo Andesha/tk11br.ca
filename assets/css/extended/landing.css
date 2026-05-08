@@ -369,7 +369,7 @@ summary:focus-visible {
 
 .quick-link-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-top: 10px;
   overflow: hidden;
   border: 1px solid var(--border);
@@ -390,11 +390,11 @@ summary:focus-visible {
   box-shadow: none;
 }
 
-.quick-link:nth-child(3n) {
+.quick-link:nth-child(2n) {
   border-right: 0;
 }
 
-.quick-link:nth-last-child(-n + 3) {
+.quick-link:nth-last-child(-n + 2) {
   border-bottom: 0;
 }
 
@@ -1024,26 +1024,6 @@ pre {
 }
 
 @media (max-width: 1080px) {
-  .quick-link-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .quick-link:nth-child(3n) {
-    border-right: 1px solid var(--border);
-  }
-
-  .quick-link:nth-child(2n) {
-    border-right: 0;
-  }
-
-  .quick-link:nth-last-child(-n + 3) {
-    border-bottom: 1px solid var(--border);
-  }
-
-  .quick-link:nth-last-child(-n + 2) {
-    border-bottom: 0;
-  }
-
   .project-card {
     grid-template-columns: 1fr;
   }

@@ -30,40 +30,50 @@
     <aside class="quick-links-card" aria-labelledby="quick-links-title">
       <p class="panel-kicker" id="quick-links-title">Quick links</p>
       <div class="quick-link-grid">
-        <a class="quick-link" href="/projects/">
-          <span class="quick-link-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M5 7v10M19 7v10M8 5h8M8 19h8M8 12h8"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/></svg>
-          </span>
-          <span><strong>Suggested software</strong><small>Tools and libraries I recommend</small></span>
-        </a>
-        <a class="quick-link" href="/posts/">
-          <span class="quick-link-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6z"/><path d="M14 3v4h4M9 11h6M9 15h6"/></svg>
-          </span>
-          <span><strong>Cheat sheets</strong><small>Quick reference guides</small></span>
-        </a>
-        <a class="quick-link" href="/posts/">
-          <span class="quick-link-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M5 19V9M10 19V5M15 19v-7M20 19V3"/><path d="M4 19h17M7 9l3-4 5 7 5-9"/></svg>
-          </span>
-          <span><strong>Setup guides</strong><small>Notes for environments, clusters, and tools</small></span>
-        </a>
-        <a class="quick-link" href="/tags/scheduling/">
-          <span class="quick-link-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M4 17h5v3H4zM15 17h5v3h-5zM9 4h6v4H9zM12 8v4M6.5 17v-3H18v3"/><path d="M4 9h4M16 9h4"/></svg>
-          </span>
-          <span><strong>Slurm notes</strong><small>Scheduling, QoS, and best practices</small></span>
-        </a>
-        <a class="quick-link" href="/projects/#eegstudyflow">
-          <span class="quick-link-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><path d="M9 6h6M7.5 8.5l3 6.5M16.5 8.5l-3 6.5"/></svg>
-          </span>
-          <span><strong>Data workflows</strong><small>Processing patterns and templates</small></span>
-        </a>
-        {{- with site.GetPage "/ai-disclosure" }}
+        {{- with site.GetPage "/recommended-ai-tools" }}
         <a class="quick-link" href="{{ .RelPermalink }}">
           <span class="quick-link-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M6 3h12v18H6z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>
+          </span>
+          <span><strong>{{ .Title }}</strong><small>{{ .Description }}</small></span>
+        </a>
+        {{- end }}
+        {{- with site.GetPage "/eeg-quickstart" }}
+        <a class="quick-link" href="{{ .RelPermalink }}">
+          <span class="quick-link-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><path d="M9 6h6M7.5 8.5l3 6.5M16.5 8.5l-3 6.5"/></svg>
+          </span>
+          <span><strong>{{ .Title }}</strong><small>{{ .Description }}</small></span>
+        </a>
+        {{- end }}
+        {{- with site.GetPage "/software-toolkits" }}
+        <a class="quick-link" href="{{ .RelPermalink }}">
+          <span class="quick-link-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 7v10M19 7v10M8 5h8M8 19h8M8 12h8"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/></svg>
+          </span>
+          <span><strong>{{ .Title }}</strong><small>{{ .Description }}</small></span>
+        </a>
+        {{- end }}
+        {{- with site.GetPage "/reading-list" }}
+        <a class="quick-link" href="{{ .RelPermalink }}">
+          <span class="quick-link-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 5h7a3 3 0 0 1 3 3v11a3 3 0 0 0-3-3H4z"/><path d="M20 5h-7a3 3 0 0 0-3 3v11a3 3 0 0 1 3-3h7z"/></svg>
+          </span>
+          <span><strong>{{ .Title }}</strong><small>{{ .Description }}</small></span>
+        </a>
+        {{- end }}
+        {{- with site.GetPage "/hpc-quickstart" }}
+        <a class="quick-link" href="{{ .RelPermalink }}">
+          <span class="quick-link-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 17h5v3H4zM15 17h5v3h-5zM9 4h6v4H9zM12 8v4M6.5 17v-3H18v3"/><path d="M4 9h4M16 9h4"/></svg>
+          </span>
+          <span><strong>{{ .Title }}</strong><small>{{ .Description }}</small></span>
+        </a>
+        {{- end }}
+        {{- with site.GetPage "/ai-disclosure" }}
+        <a class="quick-link" href="{{ .RelPermalink }}">
+          <span class="quick-link-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3l8 4v6c0 4-3.5 6.5-8 8-4.5-1.5-8-4-8-8V7z"/><path d="M9 12l2 2 4-5"/></svg>
           </span>
           <span><strong>{{ .Title }}</strong><small>{{ .Description }}</small></span>
         </a>
