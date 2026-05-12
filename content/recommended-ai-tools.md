@@ -57,32 +57,33 @@ Disclosure: I used AI to go out onto the internet and do some research to find n
 
 ## General Assistants
 
-These are the subscriptions I would compare first. Most people should pay for one of these before adding specialized tools.
+If you are new to the space, I would start with either **Codex/GPT or the Claude models**. Additionally, other services are outlined below.
 
 - **[ChatGPT](https://chatgpt.com/)**: Best default if you want one general AI subscription for writing, brainstorming, coding help, images, documents, and everyday questions. It is broad, polished, and easy to recommend to someone who does not want to think too hard about the category.
   - **Best For:** General-purpose AI help; first drafts and rewrites; explanations; mixed text, code, image, and document workflows.
   - **Caveats:** It can sound confident when it is wrong. Ask for sources when facts matter, and compare it with Claude if your main work is code or long documents.
   - **Personal Comments:** TODO
-- **[Claude](https://claude.ai/)**: Best when reasoning quality, prose quality, long context, or careful code review matters more than having the broadest product ecosystem.
+- **[Claude](https://claude.ai/)**: Best when reasoning quality, prose quality, long context, or careful code review matters more than having the broadest product ecosystem. MAKE SURE TO MENTION CLAUDE CODE
   - **Best For:** Coding help; code review; long documents; careful editing; refactoring plans; trade-off analysis.
   - **Caveats:** It is still not a substitute for tests, review, or domain judgment. Usage limits can matter in long sessions.
   - **Personal Comments:** TODO
-- **[Gemini](https://gemini.google.com/)**: Best if your work already lives in Google Workspace or you need very large-context workflows close to Gmail, Docs, Drive, Search, and Android.
-  - **Best For:** Google Workspace users; long-context document work; multimodal questions; Google-account-native workflows.
-  - **Caveats:** Ecosystem fit is the main reason to choose it. If you do not use Google products heavily, compare it with ChatGPT and Claude first.
-  - **Personal Comments:** TODO
-- **[Perplexity](https://www.perplexity.ai/)**: Best as a fast research companion when citations and link trails matter more than drafting polish.
-  - **Best For:** Source-backed web research; recent information; comparing public claims; building a reading list.
-  - **Caveats:** Citations can still be incomplete or misleading. Read the sources yourself before treating an answer as settled.
-  - **Personal Comments:** TODO
-- **Grok, Microsoft Copilot, Mistral Le Chat, DeepSeek, Qwen, Kimi, GLM, And Other Frontier Models:** These are worth knowing about, but I would not start most people here unless they have a specific reason. Grok is tied to X and real-time social data, Microsoft Copilot makes sense for Office-heavy organizations, Mistral is interesting for EU-hosted workflows, and the Chinese model ecosystem is increasingly important for open-weight and low-cost model access.
-  - **Best For:** Model comparison; regional or sovereignty requirements; Microsoft 365 organizations; open-weight experimentation; low-cost API work.
-  - **Caveats:** Availability, privacy posture, pricing, benchmarks, and model names change quickly. Do not choose one only because it is currently winning a leaderboard.
-  - **Personal Comments:** TODO
+- **[Gemini](https://gemini.google.com/)**: Can be useful when doing multimodal work like summarizing YouTube videos.
+  - **Personal Comments:** Not my favourite. I pretty much avoid it as it's strictly worse than other models.
+- **[Perplexity](https://www.perplexity.ai/)**: Best for doing a "shotgun approach" to get your literature review off the ground.
+  - **Caveats:** Can still hallucinate. Be careful.
+  - **Personal Comments:** I have only used this a few times. It worked well for AI research. Your mileage may vary.
+- **Grok, Microsoft Copilot, Mistral Le Chat, DeepSeek, Qwen, Kimi, GLM, And Other Frontier Models:** These are worth keeping an eye on to see how they are performing relative to the latest models.
+  - **Best For:** Model comparison, privacy, open-weight experimentation.
+  - **Personal Comments:** Personally, I have found uses for Gemma in my day to day work. Copilot on the other hand I have little to no use for.
 
 ## Coding Tools
 
-The coding-tool market has split into editor assistants, terminal agents, open-source extensions, and remote cloud agents. I would not try to use all of these at once. Pick one editor assistant, one terminal agent, and maybe one experiment.
+There's a few different major categories of coding tools at the moment. Some exist in multiple categories. Pick what seems appealing and don't be afraid to change your mind later.
+
+- **Editor based**: Extensions to things like VS Code. Most of the frontier labs support this.
+- **Terminal**: Some sort of TUI application outside of an editor.
+- **Open-source**: Harnesses that are open 
+- **Cloud agents**: Stay away unless you have a good reason. Can really burn tokens.
 
 **Editor-First Tools**
 
