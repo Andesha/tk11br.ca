@@ -35,26 +35,23 @@ Disclosure: I used AI to go out onto the internet and do some research to find n
 
 ## Decision Trees
 
-- If you want one general AI subscription, start with [ChatGPT](https://chatgpt.com/).
-- If you write code or long documents often, try [Codex](https://openai.com/codex/).
-- If you need sourced research, try [Perplexity](https://www.perplexity.ai/).
-- If you want AI in an editor, start with [Cursor](https://www.cursor.com/).
-- If you want a terminal coding agent, try [Claude Code](https://www.anthropic.com/claude-code)
+- **One general AI subscription?** Start with [ChatGPT](https://chatgpt.com/). Compare Claude if you write long documents or code often.
+- **Are you mostly writing or reviewing long-form text?** Try Claude first.
+- **Are you doing sourced public research?** Start with [Perplexity](https://www.perplexity.ai/), then verify sources directly.
+- **Are you coding inside an editor?** Start with [Cursor](https://www.cursor.com/).
+- **Are you delegating repo work to a terminal agent?** Try [Codex](https://openai.com/codex/) or [Claude Code](https://www.anthropic.com/claude-code).
   - As of this article, Codex is likely better to use day to day. Claude is easier to onboard with.
-- If you want an extendible, minimal, open source, and provide independant harness, try: [Pi](https://pi.dev/).
-- If you want to have many threads with agents visually, look at [T3 Code](https://t3.codes/).
-- Does it touch sensitive data? If yes, prefer enterprise-licensed tools with contractual controls, or host your own models.
-- Does it need access to internal files, email, calendar, or code? Use Claude.
-- Is it for coding? Use Cursor, or Codex/Claude in VS Code.
+- **Do you want an extensible, minimal, open-source, provider-independent harness?** Try [Pi](https://pi.dev/).
+- **Do you want a visual interface for many agent threads?** Try [T3 Code](https://t3.codes/).
+- **Does the work touch sensitive data?** Use enterprise-licensed tools with contractual controls, or host your own models.
+- **Does it need access to internal files, email, calendar, or code?** Claude with enterprise tools.
 
 ## Buying Advice
 
-- **Pay for one general assistant first.** For most people, that means ChatGPT or Claude.
-- **Add a coding tool only if you code every week.** Cursor, Copilot, Claude Code, OpenCode, Aider, and pi are easiest to justify when they replace real development time.
-- **Use Perplexity when sources matter.** It is strongest as a research companion, not as your only assistant.
-- **Pick a category before picking a brand.** Decide whether you want an editor assistant, terminal agent, open-source tool, cloud agent, or orchestration interface.
-- **Prefer reviewable workflows.** The best coding tools make diffs, tests, logs, and rollback easy.
-
+- **Pay for one general assistant first.** Just pick one service to start.
+- **Add a coding tool only if you code every week.** Cursor or Claude is easier to justify if you code all the time.
+- **Use Perplexity when sources matter.** It is the strongest research companion.
+- **Prefer reviewable workflows.** The best tools can integrate with Git, and you can review their output.
 - **Watch usage-based pricing.** Bring-your-own-key and agentic tools can burn money faster than autocomplete tools.
 - **Review subscriptions monthly.** AI tools overlap heavily, and it is easy to pay for three tools when one would do.
 
