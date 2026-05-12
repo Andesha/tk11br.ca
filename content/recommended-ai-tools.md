@@ -4,60 +4,48 @@ description: "Opinionated buying guidance for AI tools and services."
 date: 2026-05-12T00:00:00-04:00
 ---
 
-This page functions as my current reference for AI tools.
-
-My current recommendations for AI tools that are worth trying or paying for. This page is intentionally practical: what I would use, who it is for, and what caveats matter before spending money.
-
-AI products change quickly, so treat this as buying guidance, not a permanent ranking. Start with the free tier when possible, pay for one tool that matches your main workflow, and cancel anything you are not using every week.
+This page functions as my current reference for AI tools. Make sure that you confirm the date of this article to check for relevance. The space can change a lot in a short amount of time.
 
 Disclosure: I used AI to go out onto the internet and do some research to find new tools to review. Personal comments are all written by me.
 
 ## Practical Shortlists
 
-**Tools For Ordinary Staff**
+**Day to Day Tools**
 
-- **General Assistant:** ChatGPT, Claude, Gemini, Microsoft Copilot.
-- **Search And Research:** Perplexity, ChatGPT Deep Research, Elicit.
-- **Meeting Notes:** Otter, Fireflies, Zoom AI Companion, Teams Copilot.
-- **Writing:** ChatGPT, Claude, Grammarly, Microsoft Copilot.
-- **Slides And Design:** Canva, PowerPoint Copilot, Adobe Firefly.
-- **Data And CSV Analysis:** ChatGPT, Claude, Julius, Power BI Copilot.
+- **General Assistant:** GPT models, Claude, Gemma-4.
+- **Meeting Notes:** Whisper and its associated alternatives.
+- **Writing:** Claude, Harper, ChatGPT.
+- **Slides And Design:** Use any LLM to write to Marp format.
+- **Search And Research:** Perplexity.
 
-**Tools For Developers**
+**Developer Specific**
 
-- **IDE Assistant:** GitHub Copilot, Cursor, Windsurf, Continue.
-- **Terminal Or Code Agent:** Claude Code, Codex, Aider, Cline.
-- **Local Models:** Ollama, LM Studio, Open WebUI.
-- **Inference Serving:** vLLM, llama.cpp, TGI, SGLang.
-- **RAG Apps:** LlamaIndex, LangChain / LangGraph, Haystack, Dify.
-- **Vector Database:** Qdrant, Weaviate, Pinecone, Chroma.
+- **IDE Assistant:** Cursor.
+- **Terminal Or Code Agent:** Pi, Codex, Claude Code.
+- **Local Models:** Gemma-4, Qwen3.6
+- **Inference Serving:** vLLM, llama.cpp.
+- **RAG Apps:** LangChain / LangGraph.
+- **Vector Database:** Pinecone.
 
 **Tools For Organizations**
 
-- **Enterprise Chat:** ChatGPT Enterprise, Claude Enterprise, Microsoft 365 Copilot, Gemini Enterprise.
-- **Internal Search:** Glean, Microsoft 365 Copilot, Google Gemini, Hebbia.
-- **BI And Analytics:** Power BI Copilot, Tableau Agent, Databricks Genie.
-- **Secure App Building:** Azure AI Foundry, AWS Bedrock, Vertex AI, OpenAI API, Anthropic API.
-- **Self-Hosted Or Private Workflows:** Open WebUI, AnythingLLM, Dify, Flowise, vLLM.
+- **Enterprise Chat:** Frontier labs have enterprise plans.
+- **Secure App Building:** AWS Bedrock, Anthropic API.
+- **Self-Hosted Or Private Workflows:** LiteLLM, vLLM.
 
-## Short Version
+## Decision Trees
 
-- **If you want one general AI subscription, start with [ChatGPT](https://chatgpt.com/).** It is the easiest default for mixed writing, brainstorming, coding help, image work, and everyday questions.
-- **If you write code or long documents often, try [Claude](https://claude.ai/).** It is usually the first place I would go for careful editing, code review, refactoring plans, and long-context reasoning.
-- **If you live in Google Workspace, try [Gemini](https://gemini.google.com/).** Its main advantage is integration with Google's ecosystem and very large-context workflows.
-- **If you need sourced research fast, try [Perplexity](https://www.perplexity.ai/).** It is useful when citations and link trails matter more than raw drafting ability.
-- **If you want AI in an editor, start with [Cursor](https://www.cursor.com/) or [GitHub Copilot](https://github.com/features/copilot).** Cursor is the stronger AI-native editor. Copilot is the safer default if you already like your current editor.
-- **If you want a terminal coding agent, try [Claude Code](https://www.anthropic.com/claude-code), [OpenCode](https://opencode.ai/), [Aider](https://aider.chat/), or [pi](https://pi.dev/).** The right choice depends on how much you value model quality, open-source control, Git-native workflows, or custom harnesses.
-- **If you want to compare many agents visually, look at [T3 Code](https://t3.codes/).** It is a useful open-source desktop interface for running coding agents side by side.
-
-## Decision Tree
-
-- **Does it touch sensitive data?** If yes, prefer enterprise-licensed tools with contractual controls. Avoid random consumer tools.
-- **Does it need access to internal files, email, calendar, or code?** If yes, use Microsoft 365 Copilot, Google Gemini, Glean, ChatGPT Enterprise, Claude Enterprise, or a controlled internal RAG system.
-- **Is it for coding?** Use GitHub Copilot, Cursor, or Windsurf for IDE work. Use Claude Code, Codex, Aider, Cline, or similar agents for repo work.
-- **Is it for public research?** Use Perplexity, Elicit, Consensus, Scite, or Semantic Scholar, then synthesize with ChatGPT, Claude, or NotebookLM.
-- **Is it for confidential research data?** Use enterprise tools, local or self-hosted tools, or a governed internal service.
-- **Is it creative or media work?** Use Canva, Adobe Firefly, Runway, Sora, Veo, Kling, ElevenLabs, or similar tools, but check copyright, consent, likeness, and data-use policies first.
+- If you want one general AI subscription, start with [ChatGPT](https://chatgpt.com/).
+- If you write code or long documents often, try [Codex](https://openai.com/codex/).
+- If you need sourced research, try [Perplexity](https://www.perplexity.ai/).
+- If you want AI in an editor, start with [Cursor](https://www.cursor.com/).
+- If you want a terminal coding agent, try [Claude Code](https://www.anthropic.com/claude-code)
+  - As of this article, Codex is likely better to use day to day. Claude is easier to onboard with.
+- If you want an extendible, minimal, open source, and provide independant harness, try: [Pi](https://pi.dev/).
+- If you want to have many threads with agents visually, look at [T3 Code](https://t3.codes/).
+- Does it touch sensitive data? If yes, prefer enterprise-licensed tools with contractual controls, or host your own models.
+- Does it need access to internal files, email, calendar, or code? Use Claude.
+- Is it for coding? Use Cursor, or Codex/Claude in VS Code.
 
 ## Buying Advice
 
@@ -66,10 +54,9 @@ Disclosure: I used AI to go out onto the internet and do some research to find n
 - **Use Perplexity when sources matter.** It is strongest as a research companion, not as your only assistant.
 - **Pick a category before picking a brand.** Decide whether you want an editor assistant, terminal agent, open-source tool, cloud agent, or orchestration interface.
 - **Prefer reviewable workflows.** The best coding tools make diffs, tests, logs, and rollback easy.
+
 - **Watch usage-based pricing.** Bring-your-own-key and agentic tools can burn money faster than autocomplete tools.
 - **Review subscriptions monthly.** AI tools overlap heavily, and it is easy to pay for three tools when one would do.
-- **Treat workplace AI as governance, not novelty.** Ask what data is entered, where it is stored, whether it is used for training, whether prompts and outputs are logged, and whether the tool supports SSO, admin controls, retention, audit, and existing permissions.
-- **Maintain approved-use lists.** At minimum, separate tools approved for general use, tools approved only for public or non-sensitive data, and tools approved for sensitive or internal data under enterprise controls.
 
 ## General Assistants
 
