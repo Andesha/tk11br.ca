@@ -11,3 +11,9 @@ Use the default canonical triage labels: `needs-triage`, `needs-info`, `ready-fo
 ### Domain docs
 
 Single-context repo: root `CONTEXT.md` plus root `docs/adr/`. See `docs/agents/domain.md`.
+
+### New posts
+
+When adding a `content/posts/*.md` page, work through the update checklist so
+curated surfaces (homepage cards, Projects, Talks, tags) stay in sync. See
+`docs/agents/new-post-checklist.md`.
