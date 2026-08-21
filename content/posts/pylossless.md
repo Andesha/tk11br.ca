@@ -7,228 +7,19 @@ draft: false
 tags: ["python", "eeg", "preprocessing", "PyLossless"]
 ---
 
-In April 2025 I had the idea to get [PyLossless](https://github.com/andesha/pylossless) put onto the DRAC clusters as an official module because I needed to clean at least half a dozen different datasets. At the time, I managed a lot of my projects with virtual environments per project, so this was going to involve reinstalling the same package over and over.
+In April 2025, I wanted to put [PyLossless](https://github.com/andesha/pylossless) on the DRAC clusters as an official module. I had at least half a dozen datasets to clean, and I was still managing many projects with separate virtual environments. Reinstalling the same preprocessing package for every dataset made no sense.
 
-Funnily enough, the module was already there! When I requested it be updated by the internal team, they said they had a few things that they'd like changed about it, especially if I was going to be doing active development on it myself.
+It turned out that PyLossless was already available as a module. When I asked the internal team to update it, they gave me a list of changes they wanted first, especially if I planned to develop it myself. That request turned into active stewardship of the project and, eventually, co-ownership of its official repository.
 
-This led to my active stewardship of the project and becoming a co-owner on the project's official repository.
+Since then, I have touched pretty much every part of the project. I made it easier to install on HPC systems, replaced the old quality-control dashboard, simplified the configuration and rejection policy, and threw out a lot of stuff that was no longer helping anyone. Some of that cleanup was long overdue. Some came from watching researchers use the pipeline and finding the places where it made their lives harder for no good reason.
 
-The rest of this blog post is dedicated to the work I have since done on the project up to today to make it more HPC-friendly, user-friendly, documented, easy to containerize, and more.
+Since March 18, 2025, that has meant 92 commits, 87 changed files, 2,532 insertions, and 17,535 deletions. I am much happier about the deletions than the additions. PyLossless needed fewer moving parts before it needed more features.
 
-Since March 18, 2025, there have been **92 commits**!
+## Making PyLossless practical on HPC
 
-- **87 files changed**.
-- **2,532 insertions**.
-- **17,535 deletions**.
+The original goal was simple. I wanted one maintained installation on DRAC instead of installing another copy for every project.
 
-## Major Repo Changes Since Then
-
-Since I took over for Scott Huberty, here's a rough list of my changes:
-
-- HPC usability.
-- Simplified installation.
-- Modern `pyproject.toml` packaging.
-- Removal of old Dash dashboard, CI, docs, examples, and bundled data.
-- A new QC implementation in `pylossless/qc.py`.
-- Simplified default configuration.
-- Improved/manual rejection workflow.
-- Diagnostic plotting.
-- Non-BIDS save support.
-- New metric-oriented tests rather than the original test suite.
-
-The following subsections cover these changes in more detail.
-
-### 1. First Pass of Cosmetic Changes
-
-There were a lot of "in progress" things in the documentation, as well as stale notes that had already been completed. This was a first easy step.
-
-- README rewritten to describe this as an **HPC-ready lightweight fork**.
-- Links and install instructions changed from `lina-usc/pylossless` to `Andesha/pylossless`.
-- Original badges for Codecov and ReadTheDocs were removed.
-- Many old notes, test scripts, and extra materials were removed.
-
-### 2. CI/CD Removed
-
-Personally, while I know CI/CD is very important, the project in my opinion wasn't quite ready for this before we had official tests.
-
-Deleted GitHub and project automation files:
-
-- `.github/dependabot.yml`.
-- `.github/workflows/build_doc.yml`.
-- `.github/workflows/check_linting.yml`.
-- `.github/workflows/pypi.yml`.
-- `.github/workflows/test_pipeline.yml`.
-- `.pre-commit-config.yaml`.
-- `.readthedocs.yaml`.
-- `codecov.yml`.
-
-### 3. Documentation and Examples Heavily Changed
-
-Previous documentation was really dated. It included examples that didn't work anymore and were also bloating the repository. I chose to take all of this out, and rewrite it.
-
-Removed old examples and notebooks:
-
-- `examples/plot_0_implementation.py`.
-- `examples/plot_10_run_pipeline.py`.
-- `examples/test_config.yaml`.
-- `examples/usage.py`.
-- `notebooks/pipeline_algorithms.ipynb`.
-- `notebooks/qc_example.ipynb`.
-
-Added/expanded README content for:
-
-- Pipeline assumptions.
-- Pipeline stages.
-- Installation.
-- QC dependencies.
-- Running a simple build test.
-- HPC/Narval environment setup.
-- Sample HPC workflow using `main.py`, `job.sh`, and `run_all.sh`.
-
-Added test documentation:
-
-- `tests/documentation.md`.
-
-### 4. Test Data and Simulated Datasets Removed
-
-A classic issue that needed fixing, here. Someone had accidentally committed an actual recording file, slowing down cloning by a huge amount. Ripping this out helped tons.
-
-Deleted bundled sample/test BIDS data under:
-
-- `pylossless/assets/test_data/...`.
-
-Deleted dataset utilities:
-
-- `pylossless/datasets/__init__.py`.
-- `pylossless/datasets/datasets.py`.
-- `pylossless/datasets/simulated.py`.
-
-### 5. Dash Dashboard Removed
-
-My next intention was to improve the quality-control procedure to be easier to use for grad students, and bring back some of the past visual marking features. First step was of course to remove the old ones.
-
-The old Dash-based QC/dashboard implementation was removed entirely:
-
-- `pylossless/dash/app.py`.
-- `pylossless/dash/mne_visualizer.py`.
-- `pylossless/dash/qcgui.py`.
-- `pylossless/dash/topo_viz.py`.
-- Related Dash tests, assets, and utility files.
-
-### 6. New QC System Added
-
-Incidentally, this was one of the first major AI-assisted projects I ever worked on. I'll really leave this up to its own blog post to tell the full story, but everything turned out really great.
-
-A new QC module was added:
-
-- `pylossless/qc.py`.
-- Loading and applying local rejection files.
-- Inspecting pipeline state.
-- Plotting IC/topographic review views.
-- Interactive click behavior.
-- Scroll/difference plotting.
-- Applying QC decisions through `RejectionPolicy`.
-
-README now shows usage like:
-
-```python
-pipeline = ll.LosslessPipeline()
-pipeline = pipeline.load_ll_derivative(...)
-rejection_policy = ll.RejectionPolicy()
-review = ll.QC(pipeline, rejection_policy)
-review.run()
-cleaned_raw = review.apply_qc()
-```
-
-### 7. Config System Simplified
-
-Just a simple bit of feedback from a user here. It was pointed out to me there really should just be one default config.
-
-Default config changed from adult/infant variants to one config:
-
-- Renamed `pylossless/assets/ll_default_config_adults.yaml` to `pylossless/assets/ll_default_config.yaml`.
-- Deleted `pylossless/assets/ll_default_config_infants.yaml`.
-
-`Config.load_default()` no longer accepts `kind="adults"` / `kind="infants"`.
-
-Now it just loads:
-
-```python
-pylossless/assets/ll_default_config.yaml
-```
-
-### 8. Default Config Changed
-
-This section is a little downplayed, but mainly included support for being able to see the effect of your artifact rejection parameter choice in the first stage of the pipeline. It was another big AI win.
-
-Notable config changes include:
-
-- Diagnostic plotting flags were added.
-  - `noisy_channels.plot_diagnostic`.
-  - `noisy_epochs.plot_diagnostic`.
-  - `ica.noisy_ic_epochs.plot_diagnostic`.
-- ICA random seed fixed.
-  - `random_state: 5184` for both ICA runs.
-- Default channel cleaning mode later changed to interpolation through rejection policy behavior.
-- Default adult/infant split removed.
-
-### 9. Pipeline Behavior Changed
-
-Already mentioned it in the previous section, but this was really about plotting the criteria function outcomes. Also as a result of some more user feedback it became a priority to add some less firm assumptions around BIDS requirements.
-
-Important changes in `pylossless/pipeline.py`:
-
-The import changed from:
-
-```python
-from .config import Config
-```
-
-to:
-
-```python
-from .config.config import Config
-```
-
-- `_detect_outliers()` gained a `plot_diagnostic` option that can display diagnostic plots.
-- IC noisy epoch flags are now separated by ICA run.
-  - Old flag: `BAD_LL_noisy_ICs`.
-  - New flags: `BAD_LL_noisy_ICs_1` and `BAD_LL_noisy_ICs_2`.
-- `flag_noisy_ics()` now takes a `run_id`.
-- Added `non_bids_save()` helper for saving derivatives without starting from an existing BIDS path.
-- Several pipeline comments and stale notes were removed.
-- Save behavior got a workaround for non-BIDS save use cases.
-
-### 10. Rejection Policy Changed
-
-There were some bugs in the RejectionPolicy class. This phase fixed them, and also added my own assumptions.
-
-`pylossless/config/rejection.py` received several functional changes:
-
-- Default `ch_cleaning_mode` changed from `None` to `'interpolate'`.
-- Post-cleaning filter options were added.
-  - `post_filter_l_freq`.
-  - `post_filter_h_freq`.
-- `raw.load_data()` is now called before applying rejection.
-- Average reference is recomputed after channel cleaning and again after ICA cleaning.
-- Config file loading logic was changed to update dict keys instead of setting attributes.
-- `__repr__()` now reports post-filter settings.
-
-### 11. Build and Packaging Modernized
-
-This was small, but very big for the HPC side. From this point on things worked better with EasyBuild.
-
-`setup.py` was deleted.
-
-`pyproject.toml` now contains modern package metadata:
-
-- Build backend: `setuptools.build_meta`.
-- Package name: `pylossless`.
-- Package version: `0.2.0`.
-- Python requirement: `>=3.12`.
-- Dependencies moved into `[project]`.
-
-An optional QC dependency group was added:
+Packaging got in the way first. I removed `setup.py` and moved the package metadata and dependencies into `pyproject.toml` using `setuptools.build_meta`. PyLossless now declares Python 3.12 or newer and has an optional dependency group for the QC tools:
 
 ```toml
 [project.optional-dependencies]
@@ -239,68 +30,63 @@ qc = [
 ]
 ```
 
-### 12. Requirements Changed Significantly
+That made EasyBuild much happier, which meant I could actually get the package installed on the cluster.
 
-Similar to the previous, EasyBuild now no longer had trouble resolving dependencies.
+I also consolidated the requirements files. The old project split its dependencies across separate files for QC, tests, and Read the Docs. The replacement `requirements.txt` is a pinned environment export, with versions such as MNE 1.9.0, MNE-BIDS 0.16.0, NumPy 1.26.4, and PyQt5 5.15.11. It is not the prettiest requirements file, but it gives the HPC build a reproducible environment. The normal package requirements still live in `pyproject.toml`.
 
-`requirements.txt` changed from a short abstract dependency list to a large pinned environment export.
+The documentation now includes the actual Narval setup and the batch workflow I use: a Python entry point, a job script, and a shell script for submitting a dataset. A generic installation page would not have helped much here. People needed to see how to run the thing on the cluster they actually had.
 
-Original style:
+PyLossless had also assumed that every input already belonged to a BIDS dataset. That was too strict for some of the work people brought me. I added `non_bids_save()` and adjusted the save path so users can write derivatives without beginning with an existing BIDS path. BIDS remains useful, but it no longer blocks the rest of the pipeline.
 
-```txt
-numpy>=1.21.2
-mne>=1.7
-mne_bids>=0.14
-...
+## Replacing the QC dashboard
+
+Once installation was in better shape, I moved on to quality control. I wanted grad students to review the pipeline's decisions without fighting the interface. I also missed some of the visual marking tools from earlier versions.
+
+The project had a Dash application spread across `app.py`, `mne_visualizer.py`, `qcgui.py`, and `topo_viz.py`, along with its own assets, tests, and utilities. I removed it rather than trying to repair two QC systems at once.
+
+Its replacement lives in `pylossless/qc.py`. It loads a processed derivative, shows the pipeline state, plots independent components and topographies, records interactive review decisions, and applies them through `RejectionPolicy`. The basic workflow is now:
+
+```python
+pipeline = ll.LosslessPipeline()
+pipeline = pipeline.load_ll_derivative(...)
+rejection_policy = ll.RejectionPolicy()
+review = ll.QC(pipeline, rejection_policy)
+review.run()
+cleaned_raw = review.apply_qc()
 ```
 
-New style includes many pinned packages, including:
+This was also one of my first big AI-assisted development projects. I used AI while working through the interactive plots, click behaviour, difference views, and the connection between saved decisions and `RejectionPolicy`. It was most useful for the annoying little interaction problems. I could try something, find the awkward bit, and take another run at it. The QC work deserves its own post, so I will leave the full story for later.
 
-- `mne==1.9.0`.
-- `mne-bids==0.16.0`.
-- `mne-icalabel==0.7.0`.
-- `numpy==1.26.4`.
-- `torch==2.6.0`.
-- `jupyterlab==4.4.0`.
-- `PyQt5==5.15.11`.
-- Custom `mne-qt-browser` Git dependency.
+I also added diagnostic plots earlier in the pipeline. The noisy-channel, noisy-epoch, and ICA noisy-epoch stages can now show the criteria used to mark data. That lets a researcher see what a threshold did instead of treating artifact rejection as a black box. Noisy ICA epoch flags are separated by run as `BAD_LL_noisy_ICs_1` and `BAD_LL_noisy_ICs_2`, and both ICA runs use a fixed random seed of 5184.
 
-Deleted separate requirement files:
+## Choosing fewer defaults
 
-- `requirements_qc.txt`.
-- `requirements_rtd.txt`.
-- `requirements_testing.txt`.
+User feedback exposed another avoidable complication. PyLossless shipped separate adult and infant default configurations, even though most users needed one clear starting point.
 
-### 13. Tests Replaced and Reorganized
+I replaced them with `pylossless/assets/ll_default_config.yaml`. `Config.load_default()` no longer asks for `kind="adults"` or `kind="infants"`. Researchers can still change the settings for their data, but the package no longer pretends that two bundled files cover the meaningful differences between populations.
 
-This was inspired by reading some artifact rejection benchmarks. It needs more polish but functions as a nice minimal test suite.
+The rejection policy also had behaviour that was either broken or too implicit. I changed the default channel-cleaning mode from `None` to `"interpolate"`, added optional post-cleaning high-pass and low-pass filters, and made the policy load the raw data before applying rejection. It now recomputes the average reference after channel cleaning and again after ICA cleaning. Configuration loading updates dictionary keys rather than setting attributes, and `repr()` reports the post-filter settings.
 
-Old package tests were removed:
+These defaults reflect how I think the pipeline should behave. If a channel is already marked bad, I usually want it interpolated. If the data changes, I want the reference recomputed against the data that is still there. Users can override all of this, but the defaults should at least agree with each other.
 
-- `pylossless/tests/test_pipeline.py`.
-- `pylossless/tests/test_rejection.py`.
-- `pylossless/tests/test_simulated.py`.
-- `pylossless/tests/test_utils.py`.
+## Removing what the project could not support
 
-New top-level tests and metrics files added:
+A large part of this work was deletion.
 
-- `tests/artifact_reduction_metrics.py`.
-- `tests/ica_quality_metrics.py`.
-- `tests/snr_metrics.py`.
-- `tests/test_eeg_metrics.py`.
-- `tests/conftest.py`.
+The repository still contained unfinished documentation, stale notes, broken examples, and notebooks that no longer represented the pipeline. I removed them and rewrote the README around the current package: its assumptions, processing stages, installation, QC dependencies, build check, and HPC workflow. I also removed old Codecov and Read the Docs badges and changed links from the previous fork to the current repository.
 
-These appear focused on EEG quality metrics, ICA quality, SNR, artifact reduction, and pipeline run/build validation.
+One especially painful find was an actual EEG recording committed as test data. It made every clone much larger. I removed the sample BIDS data along with the dataset and simulation utilities that depended on it. Real recordings do not belong in the package just because the tests need something to run against.
 
-## What's Left
+I also removed GitHub Actions, Dependabot, the pre-commit setup, Read the Docs configuration, and Codecov. I know removing CI sounds backwards. The project did not have a test suite I trusted, though, so most of that automation was checking stale assumptions. I would rather admit the gap than keep a collection of official-looking green badges around.
 
-While this was a ton of changes that helped both researchers and me use PyLossless, there is still a lot to do.
+The old package tests went with the code they exercised. I replaced them with a smaller top-level suite built around EEG quality, ICA quality, signal-to-noise ratio, artifact reduction, and basic pipeline execution. The new tests still need work, but their measurements are closer to the questions I care about than the previous file-by-file checks.
 
-The next things I care about are:
+This cleanup made the repository smaller and easier to install, but deletion was not the goal by itself. Each removal narrowed the project to code and documentation that I was prepared to maintain.
 
-- Even better documentation.
-- Benchmark comparisons against other pipelines.
-- Better tests besides basic build tests.
-- Bringing back CI/CD.
+## What remains unfinished
 
-For now, though, I'm happy!
+PyLossless is easier for me and other researchers to install, run, and review than it was when I requested that module update. It is not finished.
+
+The documentation still needs another pass beyond the README and HPC examples. I want to compare PyLossless against other EEG preprocessing pipelines instead of relying on internal metrics. The tests need to cover more than basic builds and a handful of signal-quality measures. Once I trust those tests, I will bring CI back.
+
+For now, PyLossless is smaller, easier to install, and less fussy about how a dataset reaches it. The workflow also looks a lot more like the way people around me actually clean EEG data. They run it on shared infrastructure, check what the automated stages marked, make their review decisions, and save the result. That was what I needed when I first asked for the DRAC module update, so I am pretty happy with where it landed.
