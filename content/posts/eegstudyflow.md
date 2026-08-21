@@ -4,7 +4,7 @@ subtitle: "An opinionated starting point for a new EEG study"
 description: "A working template that guides students and supervisors through the decisions behind a reproducible EEG study."
 date: 2026-05-05T00:00:00-04:00
 draft: false
-tags: ["eeg", "workflow", "eegstudyflow"]
+tags: ["python", "eeg", "bids", "workflow", "EEGStudyFlow"]
 ---
 
 Starting an EEG study means making dozens of small decisions. Where will the original recordings live? How will they become a BIDS dataset? Which software environment will the study use? Where does preprocessing end and analysis begin?

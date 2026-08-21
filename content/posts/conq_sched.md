@@ -4,7 +4,7 @@ subtitle: "... or maybe any scheduler?"
 description: "A talk about choosing job configurations and scheduler strategies for responsive HPC workloads."
 date: 2022-03-22T00:50:54-04:00
 draft: false
-tags: ["talk", "scheduling"]
+tags: ["talk", "hpc", "scheduling"]
 ---
 
 Coming from a slightly different angle this time, I found that researchers were often isolating themselves to fewer resources on HPC systems by not investigating what the node feature mixture looked like.

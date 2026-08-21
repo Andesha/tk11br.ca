@@ -4,7 +4,7 @@ subtitle: "Making EEG preprocessing easier to run at scale"
 description: "Python tooling for reproducible EEG preprocessing and quality-control workflows."
 date: 2026-05-05T00:00:00-04:00
 draft: false
-tags: ["python", "eeg", "pylossless"]
+tags: ["python", "eeg", "preprocessing", "PyLossless"]
 ---
 
 In April 2025 I had the idea to get [PyLossless](https://github.com/andesha/pylossless) put onto the DRAC clusters as an official module because I needed to clean at least half a dozen different datasets. At the time, I managed a lot of my projects with virtual environments per project, so this was going to involve reinstalling the same package over and over.

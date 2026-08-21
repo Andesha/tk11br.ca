@@ -4,7 +4,7 @@ subtitle: "And its cousin ViewClust-Vis!"
 description: "Early notes on packaging ViewClust and ViewClust-Vis for cluster metrics and HPC usage analysis."
 date: 2022-03-22T13:23:54-04:00
 draft: false
-tags: ["python", "viewclust", "pip"]
+tags: ["python", "hpc", "ViewClust"]
 ---
 
 In the early days of working for [SHARCNET](https://www.sharcnet.ca/my/front/), my colleague and I decided to standardize how cluster metrics were computed across our internal data frames. As mentioned in a [previous post](/posts/pandas1/), part of the solution was pandas.

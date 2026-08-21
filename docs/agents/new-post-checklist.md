@@ -27,7 +27,30 @@ post shows up as expected.
   include `talk` is listed automatically (`layouts/index.html` and the
   `talks-list` shortcode). Tag a talk with `talk` rather than hand-adding it.
 - **Tag landing pages** (`/tags/<tag>/`) — generated from `tags`. Keep tag
-  spelling consistent with existing posts.
+  spelling consistent with the vocabulary below.
+
+### Tag vocabulary
+
+Prefer established tags instead of creating near-duplicates:
+
+- `talk` — recorded presentations only; drives the Talks surfaces.
+- `python` — Python is a substantial topic.
+- `hpc` — high-performance computing.
+- `performance` — profiling or optimization.
+- `scheduling` — cluster schedulers and job submission.
+- `eeg` — EEG research or processing.
+- `bids` — Brain Imaging Data Structure.
+- `preprocessing` — data-cleaning and preprocessing pipelines.
+- `workflow` — reproducible research workflows.
+
+Named technologies and projects may be used when they are central to a post.
+Use official capitalization, such as `Cython`, `PyLossless`, `EEGStudyFlow`,
+and `ViewClust`; keep officially lowercase names such as `pandas` lowercase.
+Avoid tags for incidental mentions. Add a new general-purpose tag only when it
+would remain useful for grouping this post with current or likely future posts.
+
+The post front matter is the authoritative tag inventory; this list documents
+reusable general tags rather than every named project.
 
 ## 3. Curated surfaces (decide fits / does not fit, then edit if it fits)
 

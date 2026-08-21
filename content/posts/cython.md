@@ -4,7 +4,7 @@ subtitle: "Surely not 40x, right?"
 description: "A first look at using Cython to recover performance when Python code needs to run faster."
 date: 2022-03-20T14:40:38-04:00
 draft: false
-tags: ["talk", "python"]
+tags: ["talk", "python", "Cython", "hpc", "performance"]
 ---
 
 Back when I first got hired at SHARCNET, I used a lot of Python. I mean a lot. This meant I quickly became the lightning rod for all Python-related questions and commentary.

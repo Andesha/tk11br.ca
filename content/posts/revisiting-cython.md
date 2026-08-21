@@ -4,7 +4,7 @@ subtitle: "Five years after my first Cython webinar"
 description: "A 2025 reassessment of Cython's performance, workflow, and place beside modern Python libraries and compilers."
 date: 2025-03-26T12:00:00-04:00
 draft: false
-tags: ["talk", "python", "cython", "performance"]
+tags: ["talk", "python", "Cython", "performance"]
 ---
 
 I first presented Cython in 2020. Five years and several major releases later, I wanted to see whether that old advice still held up.
