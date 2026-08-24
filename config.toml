@@ -47,6 +47,7 @@ enableRobotsTXT = true
   since = 2022
 
   [params.assets]
+    favicon = "favicon.svg"
     theme_color = "#080c0f"
     msapplication_TileColor = "#080c0f"
 

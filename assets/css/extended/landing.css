@@ -102,39 +102,19 @@ summary:focus-visible {
 }
 
 .brand-mark {
-  display: inline-grid;
-  gap: 5px;
-  width: 30px;
-  flex: 0 0 30px;
+  display: inline-flex;
+  align-items: center;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--primary);
 }
 
-.brand-mark > span {
-  position: relative;
-  display: block;
-  height: 2px;
-  background: var(--accent);
-  border-radius: 999px;
-  box-shadow: 0 0 14px rgba(245, 165, 36, 0.28);
-}
-
-.brand-mark > span::before,
-.brand-mark > span::after {
-  position: absolute;
-  top: 50%;
-  width: 5px;
-  height: 5px;
-  content: "";
-  background: var(--accent);
-  border-radius: 2px;
-  transform: translateY(-50%);
-}
-
-.brand-mark > span::before {
-  left: 0;
-}
-
-.brand-mark > span::after {
-  right: 0;
+.brand-mark .brand-prompt {
+  margin-right: 0.12em;
+  color: var(--accent);
+  text-shadow: 0 0 14px rgba(245, 165, 36, 0.28);
 }
 
 .brand-code {
