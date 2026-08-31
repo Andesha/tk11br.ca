@@ -3,7 +3,7 @@ title: "From a Throwaway QC Prototype to PyLossless"
 subtitle: "Getting the big impossible blob of code to run"
 description: "How a throwaway repository helped prove a new EEG quality-control workflow before it moved into PyLossless."
 date: 2026-08-28T12:00:00-04:00
-draft: true
+draft: false
 tags: ["python", "eeg", "preprocessing", "workflow", "PyLossless", "agents"]
 ---
 
