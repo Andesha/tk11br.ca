@@ -701,6 +701,20 @@ summary:focus-visible {
   filter: drop-shadow(0 0 5px rgba(245, 165, 36, 0.28));
 }
 
+.agent-badge svg {
+  width: 82px;
+  height: 58px;
+}
+
+.agent-badge path {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 5px rgba(245, 165, 36, 0.28));
+}
+
 .dag-badge {
   position: relative;
   width: 82px;
