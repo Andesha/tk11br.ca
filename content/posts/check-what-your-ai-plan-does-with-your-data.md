@@ -2,7 +2,7 @@
 title: "Check what your AI plan does with your data"
 subtitle: "Paying for an AI tool doesn't mean your sessions are excluded from training"
 description: "The OpenAI Navier–Stokes announcement is a good reason to check whether your AI plan allows your sessions to be used for model training."
-date: 2026-09-09T13:30:00-04:00
+date: 2026-09-09T13:00:00-04:00
 draft: false
 tags: ["agents", "workflow"]
 ---
