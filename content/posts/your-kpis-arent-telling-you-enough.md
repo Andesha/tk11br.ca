@@ -2,7 +2,7 @@
 title: "Your KPIs Aren't Telling You Enough"
 subtitle: "Measure failure in a way that helps someone act"
 description: "Uptime percentages and other headline KPIs can hide which capabilities failed, who was affected, and what an organization should do next."
-date: 2026-09-14T12:00:00-04:00
+date: 2026-09-11T10:30:00-04:00
 draft: false
 tags: ["metrics", "workflow"]
 ---
