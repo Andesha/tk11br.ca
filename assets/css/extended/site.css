@@ -249,30 +249,9 @@ summary:focus-visible {
   box-shadow: none;
 }
 
-.desktop-social {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  padding-right: 28px;
-  border-right: 1px solid var(--border);
-}
-
-.desktop-social a,
 .desktop-menu a,
 .brand-lockup {
   white-space: nowrap;
-}
-
-.desktop-social a {
-  color: var(--secondary);
-  font-size: 0.86rem;
-  font-weight: 600;
-  box-shadow: none;
-}
-
-.desktop-social a:hover {
-  color: var(--accent);
-  background: transparent;
 }
 
 .desktop-menu a::after {
@@ -346,12 +325,6 @@ summary:focus-visible {
 .mobile-menu a:hover {
   color: var(--accent);
   background: var(--accent-soft);
-}
-
-.mobile-menu-divider {
-  height: 1px;
-  margin: 8px 4px;
-  background: var(--border);
 }
 
 
@@ -482,12 +455,6 @@ pre {
   color: var(--accent);
 }
 
-
-@media (max-width: 1000px) {
-  .brand-name {
-    display: none;
-  }
-}
 
 @media (max-width: 820px) {
   :root {

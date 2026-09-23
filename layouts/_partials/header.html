@@ -10,13 +10,6 @@
     {{- $currentPage := . }}
     {{- $currentSection := .Section }}
     <div class="nav-links">
-      <div class="desktop-social">
-        <a href="https://github.com/Andesha" rel="me noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/tk11br-hpc/" rel="me noopener">LinkedIn</a>
-        <a href="mailto:collins.tyler.k@gmail.com">Email</a>
-        <a href="https://scholar.google.com/citations?hl=en&amp;authuser=1&amp;user=-QChIzQAAAAJ" rel="me noopener">Scholar</a>
-        <a href="https://orcid.org/0009-0004-1327-7903" rel="me noopener">ORCID</a>
-      </div>
       <ul class="desktop-menu" id="menu">
         {{- range site.Menus.main }}
         {{- $menuItemURL := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL)) | absLangURL }}
@@ -37,12 +30,6 @@
         {{- range site.Menus.main }}
         <li><a href="{{ .URL | absLangURL }}">{{ .Name }}</a></li>
         {{- end }}
-        <li class="mobile-menu-divider" aria-hidden="true"></li>
-        <li><a href="https://github.com/Andesha" rel="me noopener">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/tk11br-hpc/" rel="me noopener">LinkedIn</a></li>
-        <li><a href="mailto:collins.tyler.k@gmail.com">Email</a></li>
-        <li><a href="https://scholar.google.com/citations?hl=en&amp;authuser=1&amp;user=-QChIzQAAAAJ" rel="me noopener">Scholar</a></li>
-        <li><a href="https://orcid.org/0009-0004-1327-7903" rel="me noopener">ORCID</a></li>
       </ul>
     </details>
   </nav>
