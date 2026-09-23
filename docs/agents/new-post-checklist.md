@@ -22,7 +22,9 @@ template):
 These regenerate from front matter. You do not touch them; you only confirm the
 post shows up as expected.
 
-- **Homepage "Latest post" and "Recent posts"** — newest posts by `date`.
+- **Homepage "Recent writing"** — the five newest posts by `date`, each with its
+  `description` and a topic label (EEG, AI agents, or HPC first, otherwise the
+  first non-`talk` tag).
 - **Homepage "Recorded talks" and the Talks page list** — any post whose `tags`
   include `talk` is listed automatically (`layouts/index.html` and the
   `talks-list` shortcode). Tag a talk with `talk` rather than hand-adding it.
@@ -60,11 +62,12 @@ reusable general tags rather than every named project.
 
 These are hard-coded. A new post only belongs here if it genuinely fits.
 
-- **Homepage "Highlighted projects"** (`layouts/index.html`) — three hand-picked
-  project cards. Edit only if the post is a flagship project worth featuring.
-- **Homepage "Quick links"** (`layouts/index.html`) — links to top-level
-  resource pages, not posts. Edit only if you also added a new top-level
-  resource page under `content/`.
+- **Homepage "Working on"** (`$projects` in `layouts/index.html`) — the
+  hand-picked projects in the hero panel. Edit only if the post is a flagship
+  project worth featuring.
+- **Homepage "Start here"** (`$guides` in `layouts/index.html`) — links to
+  top-level guide pages, not posts. Edit only if you also added a new top-level
+  guide under `content/`.
 - **Projects page** (`content/projects/_index.md`) — prose sections per project.
   Edit if the post represents or updates a project described here.
 - **Talks page "Publications"** (`content/talks/_index.md`) — edit if the post is
@@ -78,8 +81,8 @@ These are hard-coded. A new post only belongs here if it genuinely fits.
 ```
 New-post surfaces reviewed for <post-slug>:
 - Front matter (description set, draft flipped, tags): updated
-- Highlighted projects (homepage):        fits / does not fit — [updated | skipped]
-- Quick links (homepage):                 fits / does not fit — [updated | skipped]
+- Working on (homepage):                  fits / does not fit — [updated | skipped]
+- Start here (homepage):                  fits / does not fit — [updated | skipped]
 - Projects page (_index.md):              fits / does not fit — [updated | skipped]
 - Talks page Publications (_index.md):    fits / does not fit — [updated | skipped]
 - Related posts (both directions):        fits / does not fit — [updated | skipped]

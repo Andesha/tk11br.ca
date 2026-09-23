@@ -4,212 +4,85 @@
     {{- errorf "Missing description in %s" .File.Path }}
   {{- end }}
 {{- end }}
-<div class="landing-page" aria-label="Homepage">
-  <section class="landing-hero" aria-labelledby="hero-title">
-    <div class="hero-copy">
-      <p class="hero-kicker">High performance computing · Research software · Canada</p>
-      <h1 id="hero-title">Tyler Collins</h1>
-      <p class="hero-role">Research Computing Consultant</p>
-      <p class="hero-bio">
-        I help researchers turn computational problems into reliable, scalable software and workflows.
-        My work spans HPC systems, Python tooling, research analytics, EEG/MEG pipelines,
-        performance profiling and optimization, and human-in-the-loop uses of LLMs for scientific teams.
-      </p>
-      <ul class="hero-chips" aria-label="Research and software interests">
-        <li>HPC</li>
-        <li>Slurm</li>
-        <li>Python</li>
-        <li>Research software</li>
-        <li>Research analytics</li>
-        <li>GPU efficiency</li>
-        <li>Coding agents</li>
-        <li>LLM-assisted workflows</li>
+{{- $posts := first 5 (where site.RegularPages "Type" "posts") }}
+{{- $talks := first 3 (where site.RegularPages "Params.tags" "intersect" (slice "talk")) }}
+{{- $guides := slice "/hpc-quickstart" "/eeg-quickstart" "/software-toolkits" "/reading-list" "/recommended-ai-tools" }}
+{{- /* Topic label beside each post's date: these three first, otherwise the post's first non-talk tag. */}}
+{{- $topics := dict "eeg" "EEG" "agents" "AI agents" "hpc" "HPC" }}
+{{- $projects := slice
+  (dict "name" "PyLossless" "href" "/posts/pylossless/" "source" "https://github.com/Andesha/pylossless" "text" "Reproducible EEG preprocessing, with quality control researchers can inspect.")
+  (dict "name" "EEGStudyFlow" "href" "/posts/eegstudyflow/" "source" "https://github.com/Andesha/EEGStudyFlow" "text" "Managing EEG studies from raw recordings to analysis-ready outputs.")
+  (dict "name" "ViewClust" "href" "/posts/viewclust1/" "source" "https://github.com/Andesha/ViewClust" "text" "Usage metrics and figures for Slurm clusters, used at SHARCNET, WestGrid, Calcul Québec, and MILA.")
+}}
+<div class="home">
+  <div class="home-hero">
+    <div class="home-intro">
+      <h1>Tyler Collins</h1>
+      <p class="home-role">Research computing consultant, Canada</p>
+      <p class="home-bio">I help researchers turn computational problems into reliable software and workflows: HPC systems, Python tooling, EEG/MEG pipelines, and getting more out of the hardware you already have.</p>
+    </div>
+    <aside class="home-panel" aria-labelledby="working-on-title">
+      <div class="home-panel-head">
+        <h2 id="working-on-title">Working on</h2>
+        <a href="/projects/">All projects</a>
+      </div>
+      <ul>
+        {{- range $projects }}
+        <li>
+          <div class="home-project">
+            <h3><a href="{{ .href }}">{{ .name }}</a></h3>
+            <a class="home-source" href="{{ .source }}" aria-label="{{ .name }} source on GitHub">GitHub</a>
+          </div>
+          <p>{{ .text }}</p>
+        </li>
+        {{- end }}
       </ul>
-    </div>
-
-    <aside class="quick-links-card" aria-labelledby="quick-links-title">
-      <p class="panel-kicker" id="quick-links-title">Quick links</p>
-      <div class="quick-link-grid">
-        {{- with site.GetPage "/recommended-ai-tools" }}
-        <a class="quick-link" href="{{ .RelPermalink }}">
-          <span class="quick-link-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M6 3h12v18H6z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>
-          </span>
-          <span><strong>{{ .Title }}</strong><small>{{ .Description }}</small></span>
-        </a>
-        {{- end }}
-        {{- with site.GetPage "/eeg-quickstart" }}
-        <a class="quick-link" href="{{ .RelPermalink }}">
-          <span class="quick-link-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><path d="M9 6h6M7.5 8.5l3 6.5M16.5 8.5l-3 6.5"/></svg>
-          </span>
-          <span><strong>{{ .Title }}</strong><small>{{ .Description }}</small></span>
-        </a>
-        {{- end }}
-        {{- with site.GetPage "/software-toolkits" }}
-        <a class="quick-link" href="{{ .RelPermalink }}">
-          <span class="quick-link-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M5 7v10M19 7v10M8 5h8M8 19h8M8 12h8"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/></svg>
-          </span>
-          <span><strong>{{ .Title }}</strong><small>{{ .Description }}</small></span>
-        </a>
-        {{- end }}
-        {{- with site.GetPage "/reading-list" }}
-        <a class="quick-link" href="{{ .RelPermalink }}">
-          <span class="quick-link-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M4 5h7a3 3 0 0 1 3 3v11a3 3 0 0 0-3-3H4z"/><path d="M20 5h-7a3 3 0 0 0-3 3v11a3 3 0 0 1 3-3h7z"/></svg>
-          </span>
-          <span><strong>{{ .Title }}</strong><small>{{ .Description }}</small></span>
-        </a>
-        {{- end }}
-        {{- with site.GetPage "/hpc-quickstart" }}
-        <a class="quick-link" href="{{ .RelPermalink }}">
-          <span class="quick-link-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M4 17h5v3H4zM15 17h5v3h-5zM9 4h6v4H9zM12 8v4M6.5 17v-3H18v3"/><path d="M4 9h4M16 9h4"/></svg>
-          </span>
-          <span><strong>{{ .Title }}</strong><small>{{ .Description }}</small></span>
-        </a>
-        {{- end }}
-        {{- with site.GetPage "/ai-disclosure" }}
-        <a class="quick-link" href="{{ .RelPermalink }}">
-          <span class="quick-link-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 3l8 4v6c0 4-3.5 6.5-8 8-4.5-1.5-8-4-8-8V7z"/><path d="M9 12l2 2 4-5"/></svg>
-          </span>
-          <span><strong>{{ .Title }}</strong><small>{{ .Description }}</small></span>
-        </a>
-        {{- end }}
-      </div>
     </aside>
-  </section>
+  </div>
 
-  {{- $latestPost := index (first 1 (where site.RegularPages "Type" "posts")) 0 }}
-  {{- with $latestPost }}
-  <section class="latest-post-card" aria-labelledby="latest-post-title">
-    {{- $latestPostDescription := .Description | default (.Summary | plainify | htmlUnescape) | plainify | htmlUnescape | truncate 180 }}
-    <div class="latest-post-mark" aria-hidden="true">
-      <span></span><span></span><span></span>
-    </div>
-    <div class="latest-post-copy">
-      <div class="latest-post-topline">
-        <p class="section-kicker">Latest post</p>
-        <p class="latest-post-meta">
-          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
-          <span aria-hidden="true">·</span>
-          <span>{{ .ReadingTime }} min read</span>
-        </p>
+  <div class="home-columns">
+    <section aria-labelledby="writing-title">
+      <div class="home-head">
+        <h2 id="writing-title">Recent writing</h2>
+        <a href="/posts/">All writing</a>
       </div>
-      <h2 id="latest-post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-      {{- with $latestPostDescription }}<p class="latest-post-description">{{ . }}</p>{{- end }}
-      <div class="latest-post-actions">
-        {{- with .Params.tags }}
-        <ul class="latest-post-tags" aria-label="Latest post tags">
-          {{- range first 2 . }}
-          <li><a href="{{ printf "/tags/%s/" (urlize .) | relURL }}">{{ . }}</a></li>
-          {{- end }}
-        </ul>
-        {{- end }}
-        <a class="latest-post-cta" href="{{ .RelPermalink }}">Read latest <span aria-hidden="true">→</span></a>
-      </div>
-    </div>
-  </section>
-  {{- end }}
-
-  <section class="landing-section" aria-labelledby="projects-title">
-    <div class="section-heading">
-      <p class="section-kicker">Selected work</p>
-      <h2 id="projects-title">Highlighted projects</h2>
-    </div>
-    <div class="project-grid">
-      <article class="project-card">
-        <a class="project-card-link" href="/posts/pylossless/" aria-label="Read the PyLossless post"></a>
-        <div class="project-card-art waveform-badge" aria-hidden="true">
-          <svg viewBox="0 0 160 72" preserveAspectRatio="none"><path d="M2 42 L13 42 L20 16 L27 58 L35 31 L43 39 L51 21 L58 55 L65 38 L72 44 L80 12 L88 60 L95 35 L102 40 L110 25 L118 50 L126 43 L134 32 L142 41 L158 41"/></svg>
-        </div>
-        <div class="project-card-body">
-          <h3>PyLossless</h3>
-          <p>Python tooling for reproducible EEG preprocessing and quality-control workflows that researchers can audit and re-run.</p>
-          <a href="https://github.com/Andesha/pylossless" rel="noopener">View on GitHub <span aria-hidden="true">→</span></a>
-        </div>
-      </article>
-      <article class="project-card">
-        <a class="project-card-link" href="/posts/eegstudyflow/" aria-label="Read the EEGStudyFlow post"></a>
-        <div class="project-card-art dag-badge" aria-hidden="true">
-          <span></span><span></span><span></span><span></span><span></span>
-        </div>
-        <div class="project-card-body">
-          <h3>EEGStudyFlow</h3>
-          <p>Workflow patterns for managing EEG studies from raw recordings through to analysis-ready outputs without re-deriving state.</p>
-          <a href="https://github.com/andesha/eegstudyflow" rel="noopener">View on GitHub <span aria-hidden="true">→</span></a>
-        </div>
-      </article>
-      <article class="project-card">
-        <a class="project-card-link" href="/posts/writing-more-code-with-ai-agents/" aria-label="Read the Writing More Code with AI Agents post"></a>
-        <div class="project-card-art agent-badge" aria-hidden="true">
-          <svg viewBox="0 0 82 58"><path d="M8 12h66v38H8zM17 24l8 7-8 7M32 38h17"/></svg>
-        </div>
-        <div class="project-card-body">
-          <h3>Writing More Code with AI Agents</h3>
-          <p>A practical talk about using AI-generated tests, checks, and diagnostic code without handing over the scientific decisions.</p>
-          <a href="/posts/writing-more-code-with-ai-agents/">Watch the talk <span aria-hidden="true">→</span></a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <div class="landing-split">
-    <section class="landing-section compact-section" aria-labelledby="recent-posts-title">
-      <div class="section-heading row-heading">
-        <div>
-          <p class="section-kicker">Writing</p>
-          <h2 id="recent-posts-title">Recent posts</h2>
-        </div>
-        <a class="section-link" href="/posts/">All posts <span aria-hidden="true">→</span></a>
-      </div>
-      {{- $posts := first 5 (where site.RegularPages "Type" "posts") }}
-      {{- if $posts }}
-      <div class="post-list-compact">
+      <ol class="home-writing">
         {{- range $posts }}
-        <article class="compact-post">
-          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}<span>{{ .ReadingTime }} min read</span></time>
-          <div>
-            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-            {{- with .Summary }}<p>{{ . | plainify | htmlUnescape | truncate 150 }}</p>{{- end }}
-          </div>
-          {{- with index .Params.tags 0 }}<a class="post-chip" href="{{ printf "/tags/%s/" (urlize .) | relURL }}">{{ . }}</a>{{- end }}
-        </article>
+        {{- $p := . }}
+        {{- $topic := "" }}
+        {{- range slice "eeg" "agents" "hpc" }}{{ if and (not $topic) (in $p.Params.tags .) }}{{ $topic = index $topics . }}{{ end }}{{ end }}
+        {{- if not $topic }}{{ range $p.Params.tags }}{{ if and (not $topic) (ne . "talk") }}{{ $topic = title . }}{{ end }}{{ end }}{{ end }}
+        <li>
+          <p class="home-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan 2006" }}</time>{{ with $topic }}<span>{{ . }}</span>{{ end }}</p>
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p>{{ .Description }}</p>
+        </li>
         {{- end }}
-      </div>
-      {{- else }}
-      <p>No posts yet.</p>
-      {{- end }}
+      </ol>
     </section>
 
-    <section class="landing-section compact-section" aria-labelledby="talks-title">
-      <div class="section-heading row-heading">
-        <div>
-          <p class="section-kicker">Talks &amp; publications</p>
-          <h2 id="talks-title">Recorded talks</h2>
+    <div class="home-side">
+      <section aria-labelledby="guides-title">
+        <div class="home-head">
+          <h2 id="guides-title">Start here</h2>
         </div>
-        <a class="section-link" href="/talks/">All talks <span aria-hidden="true">→</span></a>
-      </div>
-      {{- $talks := first 3 (where site.RegularPages "Params.tags" "intersect" (slice "talk")) }}
-      {{- if $talks }}
-      <div class="talk-list">
-        {{- range $talks }}
-        <article class="talk-item">
-          <div>
-            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
-            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-            {{- with .Params.subtitle }}<p>{{ . }}</p>{{- end }}
-          </div>
-          <a class="play-link" href="{{ .RelPermalink }}" aria-label="Open {{ .Title }}">▶</a>
-        </article>
+        {{- range $guides }}
+        {{- with site.GetPage . }}
+        <a href="{{ .RelPermalink }}"><strong>{{ .Title }}</strong><span>{{ .Description }}</span></a>
         {{- end }}
-      </div>
-      {{- else }}
-      <p>Recorded talks are collected on the <a href="/talks/">Talks</a> page.</p>
-      {{- end }}
-    </section>
+        {{- end }}
+      </section>
+
+      <section class="home-talks" aria-labelledby="talks-title">
+        <div class="home-head">
+          <h2 id="talks-title">Recorded talks</h2>
+          <a href="/talks/">All talks</a>
+        </div>
+        {{- range $talks }}
+        <a href="{{ .RelPermalink }}"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time><strong>{{ .Title }}</strong>{{ with .Params.subtitle }}<span>{{ . }}</span>{{ end }}</a>
+        {{- end }}
+      </section>
+    </div>
   </div>
 </div>
 {{- end }}
