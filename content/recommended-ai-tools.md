@@ -1,14 +1,16 @@
 ---
 title: "Recommended AI Tools"
 description: "Opinionated buying guidance for AI tools and services."
-date: 2026-05-12T00:00:00-04:00
+date: 2026-09-23T00:00:00-04:00
 ---
 
 This page is my current reference for AI tools. Check the date before relying on it. This space changes a lot in a short time.
 
 ## How I choose
 
-Typically, I open up Pi and coordinate my tasks based on GitHub issues via the Matt Pocock skills. If the task is particularly difficult or involves design/prose/taste then I swap over the task to Opus 4.8 in T3 Code.
+Typically, I open up Pi and coordinate my tasks based on GitHub issues via the Matt Pocock skills. GPT 6 Sol on low is my daily driver. I only raise the reasoning level for really hard work. For long-running tasks with lots of context, I've started reaching for Opus 5.5.
+
+These recommendations assume you're using a subsidized subscription plan. Paying API rates for all your day-to-day agent work gets too expensive. Check what's actually included in your plan before making an expensive model your default.
 
 ## Harnesses
 
@@ -32,25 +34,19 @@ Typically, I open up Pi and coordinate my tasks based on GitHub issues via the M
 
 ## Models
 
-This is subjective, but my ranking is:
+I don't think a strict ranking captures how I use these. Here's what I reach for and why:
 
-1. GPT 5.6 Sol (OpenAI)
-   * I use this in Pi on "low" every day. I rarely reach for anything else.
+* **GPT 6 Sol:** My daily driver in Pi on low. So far it feels like a straightforward upgrade over GPT 5.6 Sol, including better default prose without writing skills. Low is enough for most tasks. I only turn up the reasoning for really hard ones.
+* **Astra:** The first model release that genuinely surprised me. Without being asked, it spun up multiple Playwright browsers to test and compare its work and recorded video to show it had finished. It can overengineer open-ended tasks, though, and it costs too much for me to use every day.
+* **Fable:** Excellent at producing code I can trust and merge. If I give it a huge, nearly impossible task, it comes back to me when stuck instead of burning tokens forever. Plan access and cost keep it from being my default, especially when Sol on low is usually good enough.
+* **Opus 5.5:** My choice for long-running tasks that need lots of context. It feels fast, and its prose is much better than earlier Opus releases. Opus 5 was a flat no for me, 4.8 was alright, but Sol 5.6 beat it easily.
+* **Cursor's models:** A good way to try a variety of models without building my setup. Cursor tunes the experience for its models, and I'd still suggest it as a starting point.
 
-2. Opus 4.8 (Anthropic)
-   * I reach for this when writing large chunks of text or bouncing around ideas with something that will research them for me.
-   * Claude models are impossible to beat for large-scale changes.
+I haven't used Luna 6 yet, so I can't recommend it either way. Local models have their place, but they're beyond the scope of this page.
 
-3. Cursor and its variants
-   * Cursor hand-tunes a lot of things for its models, so the experience is pretty good out of the box.
-   * As noted above, this is a good start if you want a one-size-fits-all option.
+## Outside coding
 
-Some comments:
-
-* Fable was really good, but I don't have it on my current plan.
-* Opus 5 is bad, and I don't like it.
-* I've never tried the Grok models.
-* Local models absolutely have their place, but they are beyond the scope of this page.
+I replaced a self-hosted Hermes setup for my curated daily news brief with Grok Bot. It did the job better for me, without requiring me to host something I considered potentially risky. That's a recommendation for that particular job, not a coding-model ranking.
 
 ## Skill packages
 
