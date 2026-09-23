@@ -11,7 +11,7 @@ I first presented Cython in 2020. Five years and several major releases later, I
 
 This talk looked at what changed in Cython, whether it got faster, and whether it became any easier to use. I worked through a few demo problems and compared the results with modern Python and its performance libraries.
 
-<iframe src="https://www.youtube.com/embed/n-T_8dSqd-s" title="Revisiting Cython: Is It Still Effective?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/n-T_8dSqd-s" title="Revisiting Cython: Is It Still Effective?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Abstract
 

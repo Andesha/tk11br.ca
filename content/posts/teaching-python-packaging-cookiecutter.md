@@ -11,7 +11,7 @@ In 2022, I gave a talk on creating and distributing Python packages. I used Cook
 
 The goal was to make packaging less mysterious. A new Python package needs more than a folder of source code. It also needs metadata, tests, documentation, a licence, and enough structure that someone else can install it and contribute to it. Cookiecutter gave us a concrete example to inspect instead of building every file by hand.
 
-<iframe src="https://www.youtube.com/embed/fa6mQ2gXk1g" title="Creating and Distributing Python Packages" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/fa6mQ2gXk1g" title="Creating and Distributing Python Packages" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Abstract
 

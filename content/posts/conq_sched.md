@@ -13,6 +13,6 @@ As such, this talk was created to help direct potentially abstract development e
 
 Below is my abstract for the talk as well as the recording:
 
-<iframe src="https://www.youtube.com/embed/lPsp97ZGoF8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/lPsp97ZGoF8" title="Conquering the Scheduler" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 "Determining the optimal job configuration for a given workload on HPC systems can be a difficult problem. Researchers often have different job needs, different responsiveness requirements, and different scales. This webinar will discuss these differences and how to investigate making the scheduler as responsive as possible. Topics will include whole node scheduling, by core MPI jobs, GLOST, META, and more. This presentation will assume basic knowledge of job submission, and the Linux environment. Practical examples will be discussed and used as introductions to new tools to maximize performance on the general purpose systems. Open questions will be allowed at the end of the seminar."

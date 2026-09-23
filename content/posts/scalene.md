@@ -11,7 +11,7 @@ Before rewriting slow Python or moving it into Cython, it helps to find out what
 
 This Compute Ontario Colloquium was an introduction to [Scalene](https://github.com/plasma-umass/scalene). Scalene separates time spent in Python from time spent in native libraries, and it can also profile memory and GPU use. I ran it on the Alliance systems from a Jupyter notebook, then compared native Python, vectorized code, Cython, and just-in-time compilation.
 
-<iframe src="https://www.youtube.com/embed/Uq60vknROcM" title="Modern Approaches to Profiling in Python with Scalene" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/Uq60vknROcM" title="Modern Approaches to Profiling in Python with Scalene" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Abstract
 

@@ -13,7 +13,7 @@ The response also confirmed why I wanted to give the talk. People are constantly
 
 My answer is to start with code you already trust, then put some AI slop around it.
 
-<iframe src="https://www.youtube.com/embed/06jylC7Sib0" title="Writing More Code with AI Agents" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/06jylC7Sib0" title="Writing More Code with AI Agents" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 The rest of this post are my thoughts about the various points I bring up during the talk.
 

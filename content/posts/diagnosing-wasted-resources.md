@@ -11,7 +11,7 @@ A slow job and a slow queue are different problems. This talk was about using th
 
 I covered job history, account priority, wait times, and resource-use reports. The examples looked at CPU, memory, and GPU requests that did not match the work being done. The point was to check the evidence before changing a job request.
 
-<iframe src="https://www.youtube.com/embed/RQaXX2yrED0" title="Diagnosing Wasted Resources from User-Facing Portals on the National Clusters" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/RQaXX2yrED0" title="Diagnosing Wasted Resources from User-Facing Portals on the National Clusters" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Abstract
 

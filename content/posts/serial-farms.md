@@ -11,7 +11,7 @@ Submitting a few small jobs one at a time is fine. Submitting hundreds that way 
 
 This webinar compared ways to group lots of serial tasks into manageable jobs. I covered when ordinary submissions stop making sense, how array indexes can drive repeated runs, and when it is time to use a serial farm.
 
-<iframe src="https://www.youtube.com/embed/sMZ13XJQiWo" title="Serial Farms: Package Options and When to Switch to Farming" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/sMZ13XJQiWo" title="Serial Farms: Package Options and When to Switch to Farming" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Abstract
 
