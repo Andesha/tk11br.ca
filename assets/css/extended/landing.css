@@ -182,6 +182,12 @@ summary:focus-visible {
   border-right: 1px solid var(--border);
 }
 
+.desktop-social a,
+.desktop-menu a,
+.brand-lockup {
+  white-space: nowrap;
+}
+
 .desktop-social a {
   color: var(--secondary);
   font-size: 0.86rem;
@@ -1048,6 +1054,12 @@ pre {
 @media (max-width: 1080px) {
   .project-card {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1000px) {
+  .brand-name {
+    display: none;
   }
 }
 
