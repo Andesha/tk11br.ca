@@ -69,6 +69,9 @@ These are hard-coded. A new post only belongs here if it genuinely fits.
   Edit if the post represents or updates a project described here.
 - **Talks page "Publications"** (`content/talks/_index.md`) — edit if the post is
   a publication (the recorded-talks list above is automatic).
+- **Related posts** — a `## Related posts` list at the end of a post, linking
+  others on the same thread with `relref`. Add one if the new post continues
+  an existing thread, and add a link back from each post you list.
 
 ## 4. Per-post review block (copy-paste into the PR/commit description)
 
@@ -79,6 +82,7 @@ New-post surfaces reviewed for <post-slug>:
 - Quick links (homepage):                 fits / does not fit — [updated | skipped]
 - Projects page (_index.md):              fits / does not fit — [updated | skipped]
 - Talks page Publications (_index.md):    fits / does not fit — [updated | skipped]
+- Related posts (both directions):        fits / does not fit — [updated | skipped]
 - Talk tag applied (if a talk):           yes / n/a
 ```
 

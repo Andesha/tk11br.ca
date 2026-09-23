@@ -43,3 +43,7 @@ For every AI service you use:
 4. For unpublished, sensitive, or competitive work, use a product whose data terms actually match what you need.
 
 Don't assume that paying is enough. Don't assume that a setting in one product applies to every product from the same company. And don't wait until your work is part of the biggest research story of the week to find out what you agreed to.
+
+## Related posts
+
+- [Why I still use Sol on low]({{< relref "why-i-still-use-sol-on-low.md" >}})

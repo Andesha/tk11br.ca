@@ -24,3 +24,8 @@ Opus 5.5 is what I've started using for my longest-running tasks with lots of co
 My recommendations assume subsidized subscription plans, not pay-as-you-go API pricing. Running agents at API rates every day would be too expensive for me. Check what's included in your plan before copying anyone's model ranking. The expensive option needs to do something your cheaper default can't.
 
 I've updated my [Recommended AI Tools](/recommended-ai-tools/) page with what I use now. If you're choosing a setup, start with a model you can afford to run often, then work out which tasks actually need something bigger.
+
+## Related posts
+
+- [Check what your AI plan does with your data]({{< relref "check-what-your-ai-plan-does-with-your-data.md" >}})
+- [Stop installing things your agent doesn't need]({{< relref "prompt-context-is-a-resource.md" >}})

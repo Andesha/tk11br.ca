@@ -30,3 +30,7 @@ However, if a tool helps with your everyday work across projects, keeping it in 
 For a concrete example, Claude Code supports personal skills in `~/.claude/skills/` and project skills in `.claude/skills/`. The first makes a skill available across your projects. The second keeps it in that repository. Use the equivalent project-level setup in your agent, and check the scope when you install something.
 
 Personally after writing this I cut about 10 different writing and planning skills from my globally installed skills and moved them all into a writing project. Try it out yourself!
+
+## Related posts
+
+- [Why I still use Sol on low]({{< relref "why-i-still-use-sol-on-low.md" >}})
