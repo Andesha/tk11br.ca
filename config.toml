@@ -30,8 +30,8 @@ enableRobotsTXT = true
 [params]
   env = "production"
   author = "Tyler Collins"
-  description = "Personal website and blog for Tyler Collins, High Performance Computing Technical Consultant."
-  keywords = ["Tyler Collins", "High Performance Computing", "HPC", "Python", "Research Software", "EEG", "SHARCNET"]
+  description = "Tyler Collins, research computing consultant in Canada. HPC, Python, EEG/MEG pipelines, and AI coding agents for scientific teams."
+  keywords = ["Tyler Collins", "High Performance Computing", "HPC", "Python", "Research Software", "EEG", "SHARCNET", "AI coding agents", "LLMs for research"]
   defaultTheme = "auto"
   disableThemeToggle = true
   disableScrollToTop = true
@@ -66,7 +66,7 @@ enableRobotsTXT = true
   [params.profileMode]
     enabled = true
     title = "Tyler Collins"
-    subtitle = "High Performance Computing Technical Consultant"
+    subtitle = "Research computing consultant"
 
     [[params.profileMode.buttons]]
       name = "Blog"
