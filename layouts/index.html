@@ -6,7 +6,7 @@
 {{- end }}
 {{- $posts := first 5 (where site.RegularPages "Type" "posts") }}
 {{- $talks := first 3 (where site.RegularPages "Params.tags" "intersect" (slice "talk")) }}
-{{- $guides := slice "/hpc-quickstart" "/eeg-quickstart" "/software-toolkits" "/reading-list" "/recommended-ai-tools" }}
+{{- $guides := slice "/recommended-ai-tools" "/reading-list" "/software-toolkits" "/eeg-quickstart" "/hpc-quickstart" }}
 {{- /* Topic label beside each post's date: these three first, otherwise the post's first non-talk tag. */}}
 {{- $topics := dict "eeg" "EEG" "agents" "AI agents" "hpc" "HPC" }}
 {{- $projects := slice
