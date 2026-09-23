@@ -90,3 +90,10 @@ PyLossless is easier for me and other researchers to install, run, and review th
 The documentation still needs another pass beyond the README and HPC examples. I want to compare PyLossless against other EEG preprocessing pipelines instead of relying on internal metrics. The tests need to cover more than basic builds and a handful of signal-quality measures. Once I trust those tests, I will bring CI back.
 
 For now, PyLossless is smaller, easier to install, and less fussy about how a dataset reaches it. The workflow also looks a lot more like the way people around me actually clean EEG data. They run it on shared infrastructure, check what the automated stages marked, make their review decisions, and save the result. That was what I needed when I first asked for the DRAC module update, so I am pretty happy with where it landed.
+
+## Related posts
+
+- [From a Throwaway QC Prototype to PyLossless]({{< relref "pilot-qc-to-pylossless-feature.md" >}})
+- [How Do You Test Whether EEG Got Cleaner?]({{< relref "cleanliness-metrics-eeg-pipelines.md" >}})
+- [EEGStudyFlow]({{< relref "eegstudyflow.md" >}})
+- [Turning a MATLAB EEG Pipeline Into a Container]({{< relref "matlab-eeg-pipeline-container-template.md" >}})

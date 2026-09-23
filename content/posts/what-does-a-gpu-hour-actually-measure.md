@@ -67,3 +67,7 @@ A single GPU-hour total fits nicely on a dashboard. The useful version takes a c
 GPU-hours can still work as internal shorthand for one stable pool of identical hardware. Everyone in that context knows what the unit means. The shorthand falls apart as soon as the number leaves that context.
 
 Don't make readers guess. Name the hardware, describe the allocation, and show your math.
+
+## Related posts
+
+- [Your KPIs Aren't Telling You Enough]({{< relref "your-kpis-arent-telling-you-enough.md" >}})

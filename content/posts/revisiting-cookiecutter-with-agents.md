@@ -70,3 +70,7 @@ For a small internal script that only needs to be installable, I would just let 
 For a package that I plan to publish and maintain, I would start with Cookiecutter and then give the generated project to an agent. Cookiecutter would provide the boring, repeatable decisions. The agent would adapt them and run with it.
 
 Interesting to see how far we have come in just a few years.
+
+## Related posts
+
+- [Creating and Distributing Python Packages]({{< relref "teaching-python-packaging-cookiecutter.md" >}})

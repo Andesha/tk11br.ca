@@ -60,3 +60,7 @@ Before publishing a KPI, I think we should ask three questions:
 That context can live in a footnote. It might also require a few supporting measures instead of one headline percentage. The format matters less than admitting that the number has boundaries.
 
 A KPI isn't useful because it makes performance look easy to summarize. It is useful when it describes failure clearly enough that we can do something about it.
+
+## Related posts
+
+- [What Does a GPU-Hour Actually Measure?]({{< relref "what-does-a-gpu-hour-actually-measure.md" >}})

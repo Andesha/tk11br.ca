@@ -47,3 +47,10 @@ It was cool to see how little custom machinery it needed. The MATLAB Compiler an
 Now, a working MATLAB pipeline doesn't always need to become platform-independent source code with a new installation story. It may only need a clear command-line entry point, a known-good result, and a container.
 
 The [template repository](https://github.com/Andesha/matlab-container-template) has the complete functions and commands. The code snippets really are most of the process.
+
+## Related posts
+
+- [PyLossless]({{< relref "pylossless.md" >}})
+- [From a Throwaway QC Prototype to PyLossless]({{< relref "pilot-qc-to-pylossless-feature.md" >}})
+- [How Do You Test Whether EEG Got Cleaner?]({{< relref "cleanliness-metrics-eeg-pipelines.md" >}})
+- [EEGStudyFlow]({{< relref "eegstudyflow.md" >}})

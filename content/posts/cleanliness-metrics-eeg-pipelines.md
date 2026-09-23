@@ -63,3 +63,10 @@ The first version could be pretty boring. Save the before-and-after artifact mea
 That would be much more useful than my original pile of quality metrics pretending to know whether the EEG got cleaner.
 
 The test I wanted back in April was not a single assertion after all. It was a comparison. That is a little harder to fit into pytest, but at least it asks the right question.
+
+## Related posts
+
+- [PyLossless]({{< relref "pylossless.md" >}})
+- [From a Throwaway QC Prototype to PyLossless]({{< relref "pilot-qc-to-pylossless-feature.md" >}})
+- [EEGStudyFlow]({{< relref "eegstudyflow.md" >}})
+- [Turning a MATLAB EEG Pipeline Into a Container]({{< relref "matlab-eeg-pipeline-container-template.md" >}})

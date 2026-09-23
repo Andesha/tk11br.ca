@@ -17,6 +17,10 @@ This talk looked at what changed in Cython, whether it got faster, and whether i
 
 Python is often praised for its speed of development but criticized for its execution speed. However, this has changed significantly in recent years due to major improvements in both Python itself and its most popular libraries. Libraries such as TensorFlow, OpenCV, NumPy, and Pandas all use a tool called Cython. Cython is an extension of Python that allows functions to be compiled into C or C++, mitigating Python's performance limitations.
 
-Since the [last webinar on this package in 2020](https://youtu.be/y6bKDKFavPA), several major versions have been released. This talk will explore what has changed, whether performance has improved, and if development has become easier. During the webinar, a few demo problems will be explored live. Experience with Python is expected, while familiarity with C/C++ and Jupyter notebooks will be helpful.
+Since the [last webinar on this package in 2020]({{< relref "cython.md" >}}), several major versions have been released. This talk will explore what has changed, whether performance has improved, and if development has become easier. During the webinar, a few demo problems will be explored live. Experience with Python is expected, while familiarity with C/C++ and Jupyter notebooks will be helpful.
 
 The [event page](https://explora.alliancecan.ca/events/co-colloquium-revisiting-cython-is-it-still-effective) has the event details.
+
+## Related posts
+
+- [Cython: A First Look]({{< relref "cython.md" >}})

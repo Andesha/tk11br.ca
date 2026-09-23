@@ -20,3 +20,7 @@ Have you ever wanted to be able to "pip install" your own code or share it with 
 The generated example is available in the [`teaching_example` repository](https://github.com/Andesha/teaching_example). I also kept the [Cookiecutter template used for the talk](https://github.com/Andesha/cookiecutter-pypackage).
 
 This is a backfilled project note written from GitHub issues, PRs, and project notes from around 2022-09.
+
+## Related posts
+
+- [Revisiting Cookiecutter in the Age of Coding Agents]({{< relref "revisiting-cookiecutter-with-agents.md" >}})

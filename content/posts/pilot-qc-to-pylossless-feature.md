@@ -56,3 +56,10 @@ A throwaway prototype is great when a feature feels too large because a bunch of
 Make the smallest repository that can answer your question. Let it use a weird little file for communication if that gets the idea on screen. Let the commits say `wow this is amazing`. Clean up whatever survives later.
 
 If your favourite project has a feature you've been avoiding because it looks like one big impossible blob, give it a disposable repository and an afternoon. See what happens.
+
+## Related posts
+
+- [PyLossless]({{< relref "pylossless.md" >}})
+- [How Do You Test Whether EEG Got Cleaner?]({{< relref "cleanliness-metrics-eeg-pipelines.md" >}})
+- [EEGStudyFlow]({{< relref "eegstudyflow.md" >}})
+- [Turning a MATLAB EEG Pipeline Into a Container]({{< relref "matlab-eeg-pipeline-container-template.md" >}})

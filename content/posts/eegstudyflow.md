@@ -40,3 +40,10 @@ The notebooks don't hide the decisions behind a single command. Students can see
 The detailed explanations live in the repository, close to the code they describe. The short version is this: if you're starting an EEG study and don't yet know which setup decisions will matter later, clone EEGStudyFlow before making them. If you supervise EEG students, it gives you one place to send them and one place to check their work.
 
 It's what I would've wanted when I first started.
+
+## Related posts
+
+- [PyLossless]({{< relref "pylossless.md" >}})
+- [From a Throwaway QC Prototype to PyLossless]({{< relref "pilot-qc-to-pylossless-feature.md" >}})
+- [How Do You Test Whether EEG Got Cleaner?]({{< relref "cleanliness-metrics-eeg-pipelines.md" >}})
+- [Turning a MATLAB EEG Pipeline Into a Container]({{< relref "matlab-eeg-pipeline-container-template.md" >}})
