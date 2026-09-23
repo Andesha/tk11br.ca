@@ -1,0 +1,6 @@
+{{- /* Pages without their own feed (posts, standalone pages) advertise the main feed. */ -}}
+{{- if not (.AlternativeOutputFormats.Get "rss") }}
+{{- with site.Home.OutputFormats.Get "rss" }}
+<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">
+{{- end }}
+{{- end }}

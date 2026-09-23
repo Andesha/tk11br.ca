@@ -17,6 +17,6 @@ To make a long story short, here are a few references that made it approachable:
 - [Cookiecutter](https://cookiecutter.readthedocs.io/en/1.7.2/).
 - [Virtual environments](https://docs.python.org/3/tutorial/venv.html).
 
-The package is still in use today inside SHARCNET and has also received development support from [WestGrid](https://www.westgrid.ca/), [Calcul Québec](https://www.calculquebec.ca/en/), and [MILA](https://mila.quebec/en/).
+The package is still in use today inside SHARCNET and has also received development support from WestGrid, [Calcul Québec](https://www.calculquebec.ca/en/), and [MILA](https://mila.quebec/en/).
 
 ViewClust can be found on [GitHub](https://github.com/Andesha/ViewClust). Its cousin package, [ViewClust-Vis](https://github.com/Andesha/ViewClust-Vis), implements several summary figures.
