@@ -53,6 +53,16 @@ enableRobotsTXT = true
   [params.editPost]
     disabled = true
 
+  # Homepage JSON-LD: describe a person, and list only profile URLs that identify him.
+  [params.schema]
+    publisherType = "Person"
+    sameAs = [
+      "https://orcid.org/0009-0004-1327-7903",
+      "https://github.com/Andesha",
+      "https://www.linkedin.com/in/tk11br-hpc/",
+      "https://scholar.google.com/citations?user=-QChIzQAAAAJ",
+    ]
+
   [params.profileMode]
     enabled = true
     title = "Tyler Collins"
