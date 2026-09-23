@@ -63,6 +63,24 @@ summary:focus-visible {
   color: var(--content);
 }
 
+/* Skip link: hidden until focused */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: var(--gap);
+  z-index: 200;
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--theme);
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  top: 12px;
+  color: var(--theme);
+}
+
 /* Header */
 .site-header {
   position: sticky;
@@ -649,6 +667,16 @@ summary:focus-visible {
   border-color: rgba(245, 165, 36, 0.42);
   box-shadow: 0 22px 55px -34px rgba(245, 165, 36, 0.45);
   transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card {
+    transition: none;
+  }
+
+  .project-card:hover {
+    transform: none;
+  }
 }
 
 .project-card-link {

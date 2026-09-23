@@ -1,3 +1,4 @@
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-header">
   <nav class="site-nav" aria-label="Primary navigation">
     <a class="brand-lockup" href="{{ "" | absLangURL }}" accesskey="h" title="Home (Alt + H)">
@@ -9,12 +10,12 @@
     {{- $currentPage := . }}
     {{- $currentSection := .Section }}
     <div class="nav-links">
-      <nav class="desktop-social" aria-label="External links">
+      <div class="desktop-social">
         <a href="https://github.com/Andesha" rel="me noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/tk11br-hpc/" rel="me noopener">LinkedIn</a>
         <a href="mailto:collins.tyler.k@gmail.com">Email</a>
         <a href="https://scholar.google.com/citations?hl=en&amp;authuser=1&amp;user=-QChIzQAAAAJ" rel="me noopener">Scholar</a>
-      </nav>
+      </div>
       <ul class="desktop-menu" id="menu">
         {{- range site.Menus.main }}
         {{- $menuItemURL := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL)) | absLangURL }}
@@ -44,3 +45,4 @@
     </details>
   </nav>
 </header>
+<span id="main-content" tabindex="-1"></span>
