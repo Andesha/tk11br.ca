@@ -49,6 +49,10 @@ and `ViewClust`; keep officially lowercase names such as `pandas` lowercase.
 Avoid tags for incidental mentions. Add a new general-purpose tag only when it
 would remain useful for grouping this post with current or likely future posts.
 
+Keep acronym tags lowercase in front matter. Their display names (`EEG`, `HPC`,
+`BIDS`, and lowercase `pandas`) come from `content/tags/<tag>/_index.md`, so a
+new acronym tag needs one of those files.
+
 The post front matter is the authoritative tag inventory; this list documents
 reusable general tags rather than every named project.
 

@@ -7,7 +7,6 @@ enableRobotsTXT = true
 
 [taxonomies]
   tag = "tags"
-  category = "categories"
 
 [outputs]
   home = ["HTML", "RSS"]
