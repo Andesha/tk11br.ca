@@ -16,9 +16,15 @@ A Python package for computing and visualizing usage metrics on Slurm-based HPC 
 
 Python tooling for reproducible EEG preprocessing and quality-control workflows. Aimed at making the pre-analysis steps of EEG studies auditable and easy to re-run as data and pipelines evolve.
 
+- Source: <https://github.com/Andesha/pylossless>.
+- Write-up: [PyLossless](/posts/pylossless/).
+
 ## EEGStudyFlow
 
 Workflow patterns and tooling for managing EEG studies end-to-end, from raw recordings through preprocessing and quality control to analysis-ready outputs that researchers can hand off without re-deriving state.
+
+- Source: <https://github.com/Andesha/EEGStudyFlow>.
+- Write-up: [EEGStudyFlow](/posts/eegstudyflow/).
 
 ## SHARCNET Analytics
 

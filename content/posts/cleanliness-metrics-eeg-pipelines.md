@@ -50,7 +50,7 @@ The disagreement between those answers is really useful.
 
 ## PyLossless is set up nicely for this
 
-Luckily, this is where the design of [PyLossless](https://github.com/lina-usc/pylossless) helps.
+Luckily, this is where the design of [PyLossless](https://github.com/Andesha/pylossless) helps.
 
 PyLossless records possible problems before deciding what to remove with its RejectionPolicy class. It can flag channels, periods of time, and independent components while leaving the source recording alone. A rejection policy later decides which channels to interpolate, which periods to reject, and which components to remove.
 

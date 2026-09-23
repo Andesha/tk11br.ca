@@ -7,7 +7,7 @@ draft: false
 tags: ["python", "eeg", "preprocessing", "PyLossless"]
 ---
 
-In April 2025, I wanted to put [PyLossless](https://github.com/andesha/pylossless) on the DRAC clusters as an official module. I had at least half a dozen datasets to clean, and I was still managing many projects with separate virtual environments. Reinstalling the same preprocessing package for every dataset made no sense.
+In April 2025, I wanted to put [PyLossless](https://github.com/Andesha/pylossless) on the DRAC clusters as an official module. I had at least half a dozen datasets to clean, and I was still managing many projects with separate virtual environments. Reinstalling the same preprocessing package for every dataset made no sense.
 
 It turned out that PyLossless was already available as a module. When I asked the internal team to update it, they gave me a list of changes they wanted first, especially if I planned to develop it myself. That request turned into active stewardship of the project and, eventually, co-ownership of its official repository.
 
