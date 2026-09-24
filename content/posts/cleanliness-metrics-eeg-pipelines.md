@@ -66,6 +66,7 @@ The test I wanted back in April was not a single assertion after all. It was a c
 
 ## Related posts
 
+- [What Should EEG Cleaning Improve?]({{< relref "what-should-eeg-cleaning-improve.md" >}})
 - [PyLossless]({{< relref "pylossless.md" >}})
 - [From a Throwaway QC Prototype to PyLossless]({{< relref "pilot-qc-to-pylossless-feature.md" >}})
 - [EEGStudyFlow]({{< relref "eegstudyflow.md" >}})
