@@ -28,6 +28,18 @@ Mario created [Pi](https://pi.dev/), the coding agent that Armin now works on th
 
 Something belongs here when I can explain why I'd send someone else to it, not just because I happened to read it.
 
+### [Advice to a beginning software engineer](https://www.seangoedecke.com/advice-to-a-beginning-software-engineer/)
+
+Sean Goedecke.
+
+Practical advice for new engineers: be helpful, ask questions, and use AI without handing over your judgment to it. I especially like the reminder that doing steady, useful work matters more than trying to do something astonishing.
+
+### [The senior engineer death spiral](https://sunilpai.dev/posts/the-senior-engineer-death-spiral/)
+
+Sunil Pai.
+
+A useful warning about taking on ambitious work, going quiet, and trying to make up for lost time by working harder. His advice is to share your work, help your teammates, and build momentum through small, steady contributions.
+
 ### [What I want to tell you about orbs](https://ampcode.com/notes/what-i-want-to-tell-you-about-orbs)
 
 Thorsten Ball, August 4, 2026. Added August 21, 2026.
