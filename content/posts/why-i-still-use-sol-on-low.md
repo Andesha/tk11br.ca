@@ -30,3 +30,4 @@ I've updated my [Recommended AI Tools](/recommended-ai-tools/) page with what I 
 - [When to reach for Opus]({{< relref "when-to-reach-for-opus.md" >}})
 - [Check what your AI plan does with your data]({{< relref "check-what-your-ai-plan-does-with-your-data.md" >}})
 - [Stop installing things your agent doesn't need]({{< relref "prompt-context-is-a-resource.md" >}})
+- [Start your five-hour window early]({{< relref "start-your-five-hour-window-early.md" >}})
