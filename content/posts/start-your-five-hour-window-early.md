@@ -52,3 +52,4 @@ If the afternoon wall is what keeps getting you, try the early ping or a morning
 ## Related posts
 
 - [Why I still use Sol on low]({{< relref "why-i-still-use-sol-on-low.md" >}})
+- [Get a second opinion from another model]({{< relref "get-a-second-opinion-from-another-model.md" >}})

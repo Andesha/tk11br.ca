@@ -22,3 +22,4 @@ If you've only been giving agents small jobs, try giving Opus a whole ticket and
 ## Related posts
 
 - [Why I still use Sol on low]({{< relref "why-i-still-use-sol-on-low.md" >}})
+- [Get a second opinion from another model]({{< relref "get-a-second-opinion-from-another-model.md" >}})
