@@ -47,3 +47,4 @@ Since then, it has been deployed to the Nibi cluster. To see for yourself withou
 ## Related posts
 
 - [Stop installing things your agent doesn't need]({{< relref "prompt-context-is-a-resource.md" >}})
+- [Send your agent a screenshot]({{< relref "send-your-agent-a-screenshot.md" >}})
