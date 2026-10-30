@@ -32,3 +32,4 @@ You'll get more done quicker, and everyone else gets their response times back!
 ## Related posts
 
 - [Serial Farms: Package Options and When to Switch to Farming]({{< relref "serial-farms.md" >}})
+- [Grants will need a line for tokens]({{< relref "token-allocations-for-researchers.md" >}})

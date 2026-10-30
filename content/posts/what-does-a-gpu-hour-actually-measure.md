@@ -71,3 +71,4 @@ Don't make readers guess. Name the hardware, describe the allocation, and show y
 ## Related posts
 
 - [Your KPIs Aren't Telling You Enough]({{< relref "your-kpis-arent-telling-you-enough.md" >}})
+- [Grants will need a line for tokens]({{< relref "token-allocations-for-researchers.md" >}})
