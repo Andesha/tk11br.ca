@@ -2,7 +2,7 @@
 title: "Think out loud with local Whisper"
 subtitle: "Free, private voice-to-text needs a lot less hardware than you'd think"
 description: "Talking through a problem is a good way to organize your thoughts, and OpenWhispr with a local Whisper model lets you capture it for free on hardware you probably already have."
-date: 2026-11-02T13:00:00-04:00
+date: 2026-11-02T11:00:00-05:00
 draft: false
 tags: ["workflow"]
 ---
