@@ -38,3 +38,4 @@ Ask me again in a year to see how this one aged!
 - [Check what your AI plan does with your data]({{< relref "check-what-your-ai-plan-does-with-your-data.md" >}})
 - [Your LLM Loop Is a Batch Job]({{< relref "your-llm-loop-is-a-batch-job.md" >}})
 - [What Does a GPU-Hour Actually Measure?]({{< relref "what-does-a-gpu-hour-actually-measure.md" >}})
+- [Your research isn't Navier–Stokes]({{< relref "your-research-isnt-navier-stokes.md" >}})

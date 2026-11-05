@@ -34,3 +34,4 @@ I don't expect every EEG study to run a giant pipeline benchmark or accidentally
 ## Related posts
 
 - [How Do You Test Whether EEG Got Cleaner?]({{< relref "cleanliness-metrics-eeg-pipelines.md" >}})
+- [Your research isn't Navier–Stokes]({{< relref "your-research-isnt-navier-stokes.md" >}})

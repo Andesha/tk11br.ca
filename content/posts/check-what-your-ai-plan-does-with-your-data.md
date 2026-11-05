@@ -48,3 +48,4 @@ Don't assume that paying is enough. Don't assume that a setting in one product a
 
 - [Why I still use Sol on low]({{< relref "why-i-still-use-sol-on-low.md" >}})
 - [Grants will need a line for tokens]({{< relref "token-allocations-for-researchers.md" >}})
+- [Your research isn't Navier–Stokes]({{< relref "your-research-isnt-navier-stokes.md" >}})

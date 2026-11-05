@@ -108,3 +108,7 @@ You could ask for a synthetic case where you know the answer. Ask it to verify t
 Review what it writes. Run it. See whether it tells you anything useful about code you already know.
 
 That is a much safer way to learn what agents are good at, and it produces something useful even if the generated code is disposable. The point isn't to trust AI more. The point is to cheaply make more of the stuff that helps you trust the important work.
+
+## Related posts
+
+- [Your research isn't Navier–Stokes]({{< relref "your-research-isnt-navier-stokes.md" >}})
