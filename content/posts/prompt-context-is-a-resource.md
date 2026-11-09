@@ -36,3 +36,4 @@ Personally after writing this I cut about 10 different writing and planning skil
 - [Why I still use Sol on low]({{< relref "why-i-still-use-sol-on-low.md" >}})
 - [Writing an AGENTS.md for a national cluster]({{< relref "writing-an-agents-md-for-a-national-cluster.md" >}})
 - [Send your agent a screenshot]({{< relref "send-your-agent-a-screenshot.md" >}})
+- [Your dotfiles repo should be private now]({{< relref "your-dotfiles-repo-should-be-private-now.md" >}})
