@@ -34,3 +34,4 @@ Next time you finish a change, hand it to a different model, or ask your agent t
 - [When to reach for Opus]({{< relref "when-to-reach-for-opus.md" >}})
 - [Why I still use Sol on low]({{< relref "why-i-still-use-sol-on-low.md" >}})
 - [Start your five-hour window early]({{< relref "start-your-five-hour-window-early.md" >}})
+- [What researchers ask about agents]({{< relref "what-researchers-ask-about-agents.md" >}})

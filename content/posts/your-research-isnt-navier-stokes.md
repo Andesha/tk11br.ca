@@ -50,3 +50,4 @@ Navier–Stokes got easy for an agent after decades of people making it checkabl
 - [When to reach for Opus]({{< relref "when-to-reach-for-opus.md" >}})
 - [What Should EEG Cleaning Improve?]({{< relref "what-should-eeg-cleaning-improve.md" >}})
 - [Writing More Code with AI Agents]({{< relref "writing-more-code-with-ai-agents.md" >}})
+- [What researchers ask about agents]({{< relref "what-researchers-ask-about-agents.md" >}})

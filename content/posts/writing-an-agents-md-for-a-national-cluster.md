@@ -49,3 +49,4 @@ Since then, it has been deployed to the Nibi cluster. To see for yourself withou
 - [Stop installing things your agent doesn't need]({{< relref "prompt-context-is-a-resource.md" >}})
 - [Send your agent a screenshot]({{< relref "send-your-agent-a-screenshot.md" >}})
 - [Your dotfiles repo should be private now]({{< relref "your-dotfiles-repo-should-be-private-now.md" >}})
+- [What researchers ask about agents]({{< relref "what-researchers-ask-about-agents.md" >}})
