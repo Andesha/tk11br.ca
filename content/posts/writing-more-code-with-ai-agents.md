@@ -112,3 +112,4 @@ That is a much safer way to learn what agents are good at, and it produces somet
 ## Related posts
 
 - [Your research isn't Navier–Stokes]({{< relref "your-research-isnt-navier-stokes.md" >}})
+- [My agent adoption journey]({{< relref "my-agent-adoption-journey.md" >}})

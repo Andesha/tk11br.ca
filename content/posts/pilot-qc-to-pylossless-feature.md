@@ -63,3 +63,4 @@ If your favourite project has a feature you've been avoiding because it looks li
 - [How Do You Test Whether EEG Got Cleaner?]({{< relref "cleanliness-metrics-eeg-pipelines.md" >}})
 - [EEGStudyFlow]({{< relref "eegstudyflow.md" >}})
 - [Turning a MATLAB EEG Pipeline Into a Container]({{< relref "matlab-eeg-pipeline-container-template.md" >}})
+- [My agent adoption journey]({{< relref "my-agent-adoption-journey.md" >}})

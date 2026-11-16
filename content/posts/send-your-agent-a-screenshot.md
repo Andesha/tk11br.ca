@@ -42,3 +42,4 @@ Agents can take their own screenshots too, with tools like Playwright, but that'
 - [Stop installing things your agent doesn't need]({{< relref "prompt-context-is-a-resource.md" >}})
 - [Writing an AGENTS.md for a national cluster]({{< relref "writing-an-agents-md-for-a-national-cluster.md" >}})
 - [Your dotfiles repo should be private now]({{< relref "your-dotfiles-repo-should-be-private-now.md" >}})
+- [My agent adoption journey]({{< relref "my-agent-adoption-journey.md" >}})
