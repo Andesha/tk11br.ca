@@ -3,7 +3,7 @@ title: "Approve the irreversible bits"
 subtitle: "Why I'm comfortable running agents in auto mode"
 description: "Approving every agent action trains you to stop reading the prompts. I keep approvals for the few things git can't undo and let everything else run."
 date: 2026-11-30T09:00:00-05:00
-draft: true
+draft: false
 tags: ["agents", "workflow"]
 ---
 
