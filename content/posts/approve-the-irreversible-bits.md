@@ -42,5 +42,6 @@ Personally, I'd never go back to approving every grep.
 
 ## Related posts
 
+- [Harder than "just use a container"]({{< relref "harder-than-just-use-a-container.md" >}})
 - [Your dotfiles repo should be private now]({{< relref "your-dotfiles-repo-should-be-private-now.md" >}})
 - [My agent adoption journey]({{< relref "my-agent-adoption-journey.md" >}})

@@ -57,6 +57,7 @@ The second half of the session is tomorrow, and I'll be presenting some new thin
 
 ## Related posts
 
+- [Harder than "just use a container"]({{< relref "harder-than-just-use-a-container.md" >}})
 - [Writing an AGENTS.md for a national cluster]({{< relref "writing-an-agents-md-for-a-national-cluster.md" >}})
 - [Get a second opinion from another model]({{< relref "get-a-second-opinion-from-another-model.md" >}})
 - [Your research isn't Navier–Stokes]({{< relref "your-research-isnt-navier-stokes.md" >}})
